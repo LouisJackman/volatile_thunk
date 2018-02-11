@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    background-color: #111;
+    color: #bbb;
+    font-family: sans-serif;
+    font-size: large;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 65ex;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li:not(:last-child) {
+    margin-right: 43px;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Futura, sans-serif;
+    font-weight: lighter;
+}
+
+h2.entry-title {
+	color: #454545;
+}
+
+h2.entry-title a {
+	text-decoration: none;
+}
+
+p:not(:first-child) {
+    margin-top: 15px;
+}
+
+p {
+    line-height: 1.5em;
+    letter-spacing: .5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#post-list > li {
+    list-style: none;
+}
+
+#post-list > li:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+header h1 a strong {
+    font-size: small;
+    color: #999;
+}
+
+footer {
+    text-align: center;
+}
+
+.post-info time.published {
+    font-size: smaller;
+    color: #999;
+}
+
+.entry-content {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+#content .paginator {
+    margin-top: 45px;
+}
+
+body > dl dd:not(:last-child) {
+    margin-top: 4px;
+}
+
+body > dl dt {
+    color: #999;
+}
+
+body > dl dt:not(:first-child) {
+    margin-top: 25px;
+}
+
+/*
+ * Disable unwanted elements from Pelican's simple theme that backs this one.
+ */
+section#content > h2:first-child,
+footer #about,
+.post-info address.author,
+#index > h1 {
+    display: none;
+}
