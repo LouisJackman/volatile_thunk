@@ -130,7 +130,7 @@ body > dl dt:not(:first-child) {
 }
 
 .entry-content .highlight pre {
-    overflow: scroll;
+    overflow: auto;
     padding: 20px;
 }
 
