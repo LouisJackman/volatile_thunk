@@ -129,7 +129,8 @@ body > dl dt:not(:first-child) {
     margin-top: 25px;
 }
 
-pre {
+.entry-content .highlight pre {
+    overflow: scroll;
     padding: 20px;
 }
 
