@@ -51,7 +51,7 @@ h5 {
 }
 
 h2.entry-title {
-	color: #454545;
+	color: #555;
 }
 
 h2.entry-title a {
@@ -59,11 +59,12 @@ h2.entry-title a {
 }
 
 p:not(:first-child) {
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
-p {
-    line-height: 1.5em;
+p,
+ul {
+    line-height: 25px;
     letter-spacing: .5px;
     font-family: Helvetica, sans-serif;
     font-size: 15px;
@@ -85,6 +86,7 @@ header {
 
 header h1 a strong {
     font-size: small;
+    font-weight: 100;
     color: #999;
 }
 
@@ -99,7 +101,6 @@ footer {
 
 .entry-content {
     margin-top: 20px;
-    text-align: justify;
 }
 
 #content .paginator {
@@ -110,12 +111,35 @@ body > dl dd:not(:last-child) {
     margin-top: 4px;
 }
 
+body > dl dd {
+    color: #555;
+    font-family: Futura, sans-serif;
+    font-weight: lighter;
+}
+
+body > dl dd a {
+    text-decoration: none;
+}
+
 body > dl dt {
     color: #999;
 }
 
 body > dl dt:not(:first-child) {
     margin-top: 25px;
+}
+
+pre {
+    padding: 20px;
+}
+
+ul {
+    margin-top: 30px;
+}
+
+li {
+    margin-top: 25px;
+    margin-left: 30px;
 }
 
 /*
