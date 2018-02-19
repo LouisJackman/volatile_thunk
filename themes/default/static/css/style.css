@@ -12,12 +12,11 @@ body {
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 65ex;
+    max-width: 670px;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 10px;
 }
 
 h1 a {
@@ -34,7 +33,7 @@ nav li {
 }
 
 nav li:not(:last-child) {
-    margin-right: 43px;
+    margin-right: 0;
 }
 
 a {
@@ -51,11 +50,12 @@ h5 {
 }
 
 h2.entry-title {
-	color: #555;
+    color: #555;
+    font-size: larger;
 }
 
 h2.entry-title a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 p:not(:first-child) {
@@ -63,15 +63,18 @@ p:not(:first-child) {
 }
 
 p,
-ul {
+ul,
+.post-info time.published,
+body dl dt {
     line-height: 25px;
     letter-spacing: .5px;
-    font-family: Helvetica, sans-serif;
+    font-family: Optima, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: lighter;
 }
 
 #post-list > li {
+    margin: 0 0;
     list-style: none;
 }
 
@@ -85,9 +88,10 @@ header {
 }
 
 header h1 a strong {
+    color: #555;
+    display: block;
     font-size: small;
-    font-weight: 100;
-    color: #999;
+    font-weight: 1;
 }
 
 footer {
@@ -121,21 +125,14 @@ body > dl dd a {
     text-decoration: none;
 }
 
-body > dl dt {
-    color: #999;
-}
-
 body > dl dt:not(:first-child) {
     margin-top: 25px;
 }
 
 .entry-content .highlight pre {
+    margin-top: 20px
     overflow: auto;
     padding: 20px;
-}
-
-ul {
-    margin-top: 30px;
 }
 
 li {
