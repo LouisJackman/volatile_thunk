@@ -130,7 +130,7 @@ body > dl dt:not(:first-child) {
 }
 
 .entry-content .highlight pre {
-    margin-top: 20px
+    margin-top: 20px;
     overflow: auto;
     padding: 20px;
 }
