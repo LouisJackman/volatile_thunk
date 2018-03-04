@@ -25,7 +25,7 @@ are exposed by the underlying system.
 
 A Java program holding a reference to an object ensures that
 object remains alive, but the system exposes a different type of reference
-tracking with the 
+tracking with the
 [java.lang.ref.WeakReference](https://docs.oracle.com/javase/9/docs/api/java/lang/ref/WeakReference.html)
 type insofar as allowing an object to be deleted while the programmer is still
 holding onto it. Likewise, storing a string literal into a object will never
@@ -70,7 +70,7 @@ for a form of concurrency and parallelism:
 
     :::shell
 
-    $ python3 program.py 
+    $ python3 program.py
     running the parent process
     finished a process
     running the child process
@@ -142,13 +142,13 @@ as many threads as we have processor cores. Unfortunately `user_counter` is
 shared across all threads, meaning the loading and incrementing is interleaved
 with other concurrent threads, causing the counter to be wrong most of the time.
 
-	:::shell
-	$ python3 program.py 
-	User 0 visited
-	User 0 visited
-	User 1 visited
-	User 1 visited
-	User 1 visited
+    :::shell
+    $ python3 program.py
+    User 0 visited
+    User 0 visited
+    User 1 visited
+    User 1 visited
+    User 1 visited
 
 We must remember quite a few rules to avoid shooting ourselves in the foot in
 multithreaded systems.
@@ -181,9 +181,8 @@ memory communication, as
 Signalling is the easiest way to get your feet wet with Unix IPC, _Inter-Process
 Communication_:
 
-
     :::python
-    from os import _exit, kill, getppid, fork, 
+    from os import _exit, kill, getppid, fork,
     from signal import sigwait, SIGCONT
     from time import sleep
 
@@ -210,7 +209,7 @@ Communication_:
 
         pid_2 = fork()
         if pid_2 == 0:
-            expensive_operation_2() 
+            expensive_operation_2()
             _exit(0)
 
         return pid_1, pid_2
@@ -237,12 +236,12 @@ Communication_:
 
 Running this yields:
 
-	:::shell
-	$ python3 test.py 
-	All children started.
-	All children finished main tasks; asking them to display results in order.
-	Very expensive operation 1 complete.
-	Slightly expensive operation 2 complete.
+    :::shell
+    $ python3 test.py
+    All children started.
+    All children finished main tasks; asking them to display results in order.
+    Very expensive operation 1 complete.
+    Slightly expensive operation 2 complete.
 
 The slightly expensive operation, despite being quicker, displays its
 output after the longer running one. Both of them ran at the same time; it
