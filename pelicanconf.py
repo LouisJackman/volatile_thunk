@@ -11,6 +11,12 @@ TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
 
+SUMMARY_SUFFIX = '<span class="summary-suffix">[...]</span>'
+
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = ["summary_suffix_replacer"]
+
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -18,21 +24,21 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-SUMMARY_MAX_LENGTH = None
+SUMMARY_MAX_LENGTH = 100
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-MENUITEMS = (
+MENUITEMS = [
     ('Blog', '/'),
     ('Projects', 'https://github.com/LouisJackman?tab=repositories'),
-    ('Archives', '/archives.html'))
+    ('Archives', '/archives.html')]
 
 GITHUB_URL = 'https://github.com/LouisJackman'
 
 # Social widget
-SOCIAL = (
-    ('Stack Exchange', 'https://stackexchange.com/users/2032836/ljackman'),)
+SOCIAL = [
+    ('Stack Exchange', 'https://stackexchange.com/users/2032836/ljackman')]
 
 #DISPLAY_PAGES_ON_MENU = True
 
