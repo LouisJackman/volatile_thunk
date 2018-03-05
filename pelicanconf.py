@@ -1,7 +1,7 @@
 AUTHOR = 'Louis Jackman'
 SITENAME = 'Volatile Thunk'
 SITESUBTITLE = "Louis Jackman's Blog"
-SITEURL = 'volatilethunk.com'
+SITEURL = 'https://volatilethunk.com'
 ARTICLE_URL = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 ARTICLE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
@@ -11,7 +11,7 @@ TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
 
-SUMMARY_SUFFIX = '<span class="summary-suffix">[...]</span>'
+SUMMARY_SUFFIX = '<span class="summary-suffix">[…]</span>'
 
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["summary_suffix_replacer"]
