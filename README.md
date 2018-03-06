@@ -12,7 +12,7 @@ Posts are put in `content`, under the subdirectory `$Y/$M/$D/$SLUGLINE`, where:
 They are written in Markdown, and have metadata at the start, like the
 following example on Pelican's website:
 
-```
+```markdown
 Title: My super title
 Date: 2010-12-03 10:20
 Modified: 2010-12-05 19:30
@@ -34,19 +34,8 @@ Pages are put in `content`, under `pages`. Their name is their title snake
 cased. They automatically appear on the main navigation menu. They are otherwise
 like posts.
 
-## Deploy
+## Publish
 
-The blog can be generated with `pelican content -o output -s publishconf.py`.
+The blog can be generated with `pelican -s publishconf.py`.
 
-The `ghp-import` command is used to manage the generated output's branch.
-
-After running that, two branches exist on the local host:
-
-* master: The source code of the blog.
-* gh-pages: The generated output.
-
-To honour Github's conventions for GitHub Pages, we remap the branches like this
-on pushes:
-
-* master -> source
-* gh-pages -> master
+The `s3_upload` make task publishes to AWS S3.
