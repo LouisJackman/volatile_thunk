@@ -49,10 +49,6 @@ h5 {
     font-weight: normal;
 }
 
-h1 {
-    font-family: Karma;
-}
-
 h2.entry-title {
     color: #606060;
     font-size: larger;
@@ -88,7 +84,7 @@ body dl dt {
 
 header {
     text-align: center;
-    margin-bottom: 3px;
+    margin-bottom: 7px;
 }
 
 header h2 {
