@@ -8,5 +8,5 @@ administration. The posts will no doubt be mostly around those topics.
 
 This blog uses [Pelican](https://getpelican.com), which is implemented in
 [Python](https://www.python.org) and uses [Jinja](http://jinja.pocoo.org) for
-templating. It uses the Karma font, which is licensed under the
+templating. It uses the Karma font, which is under the
 [Open Font Licence](../theme/fonts/OFL.txt).

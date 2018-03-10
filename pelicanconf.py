@@ -35,6 +35,9 @@ MENUITEMS = [
     ('Tags', '/tags.html'),
     ('Projects', 'https://github.com/LouisJackman?tab=repositories')]
 
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
+SITEMAP_SAVE_AS = 'sitemap.xml'
+
 GITHUB_URL = 'https://github.com/LouisJackman'
 
 # Social widget
