@@ -30,9 +30,10 @@ SUMMARY_MAX_LENGTH = 100
 RELATIVE_URLS = True
 
 MENUITEMS = [
-    ('Blog', '/'),
-    ('Projects', 'https://github.com/LouisJackman?tab=repositories'),
-    ('Archives', '/archives.html')]
+    ('Articles', '/'),
+    ('Archives', '/archives.html'),
+    ('Tags', '/tags.html'),
+    ('Projects', 'https://github.com/LouisJackman?tab=repositories')]
 
 GITHUB_URL = 'https://github.com/LouisJackman'
 

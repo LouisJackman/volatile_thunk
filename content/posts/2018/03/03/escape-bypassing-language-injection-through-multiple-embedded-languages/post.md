@@ -1,6 +1,6 @@
 Title: Escape-Bypassing Language Injection: Exploiting Multiple-Level Language Embedding
 Date: 2018-03-03 20:14
-Tags: appsec, escaping
+Tags: appsec, escaping, web
 
 When a fix for a well-known vulnerable programming practice becomes widely
 known, it runs the risk of being applied blindly without context, defeating its

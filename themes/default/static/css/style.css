@@ -154,6 +154,10 @@ li {
     margin-top: 15px;
 }
 
+body > li {
+    list-style: none;
+}
+
 /*
  * Disable unwanted elements from Pelican's simple theme that backs this one.
  */
