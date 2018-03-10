@@ -157,13 +157,3 @@ li {
 body > li {
     list-style: none;
 }
-
-/*
- * Disable unwanted elements from Pelican's simple theme that backs this one.
- */
-section#content > h2:first-child,
-footer #about,
-.post-info address.author,
-#index > h1 {
-    display: none;
-}
