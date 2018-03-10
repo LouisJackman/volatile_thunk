@@ -38,6 +38,10 @@ MENUITEMS = [
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
+STATIC_PATHS = ['images', 'robots.txt']
+EXTRA_PATH_METADATA = {
+    'robots.txt': {'path': 'robots.txt'}}
+
 GITHUB_URL = 'https://github.com/LouisJackman'
 
 # Social widget
