@@ -11,10 +11,12 @@ TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
 
-SUMMARY_SUFFIX = '<span class="summary-suffix">[…]</span>'
+SUMMARY_HTML_SUFFIX = '<span class="summary-suffix">[…]</span>'
 
-PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["summary_suffix_replacer"]
+PLUGIN_PATHS = ['plugins']
+PLUGINS = [
+    'summary_suffix_replacer',
+    'minify']
 
 
 # Feed generation is usually not desired when developing

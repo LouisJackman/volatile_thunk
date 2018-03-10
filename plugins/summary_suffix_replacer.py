@@ -20,7 +20,7 @@ from pelican import Pelican, signals
 
 
 def _get_suffix_replacement(settings) -> str:
-    return settings['SUMMARY_SUFFIX']
+    return settings['SUMMARY_HTML_SUFFIX']
 
 
 _DEFAULT_SUFFIX = '…'
