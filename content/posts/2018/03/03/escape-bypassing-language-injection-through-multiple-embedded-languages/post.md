@@ -1,6 +1,6 @@
 Title: Escape-Bypassing Language Injection: Exploiting Multiple-Level Language Embedding
 Date: 2018-03-03 20:14
-Tags: infosec, appsec, validation, sanitisation, escaping
+Tags: appsec, escaping
 
 When a fix for a well-known vulnerable programming practice becomes widely
 known, it runs the risk of being applied blindly without context, defeating its

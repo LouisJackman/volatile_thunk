@@ -1,6 +1,6 @@
 Title: Unix Parallelism and Concurrency: Processes & Signalling
 Date: 2018-02-12 22:30
-Tags: unix, python, c
+Tags: unix, python
 
 In this era of threads and asynchronous abstractions, applications and processes
 have become almost synonymous. A process is widely seen as the operating

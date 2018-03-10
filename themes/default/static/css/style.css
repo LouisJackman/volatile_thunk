@@ -44,12 +44,12 @@ h5 {
 }
 
 h2.entry-title {
-    color: #555;
+    color: #606060;
     font-size: larger;
 }
 
 h2.entry-title a {
-    text-decoration: none;
+    *text-decoration: none;
 }
 
 p:not(:first-child) {
@@ -86,7 +86,7 @@ header h2 {
 }
 
 header h1 a strong {
-    color: #555;
+    color: #606060;
     display: block;
     font-size: small;
     font-weight: 1;
@@ -114,13 +114,9 @@ body > dl dd:not(:last-child) {
 }
 
 body > dl dd {
-    color: #555;
+    color: #606060;
     font-family: Futura, sans-serif;
     font-weight: lighter;
-}
-
-body > dl dd a {
-    text-decoration: none;
 }
 
 body > dl dt:not(:first-child) {
@@ -140,7 +136,22 @@ li {
 
 .summary-suffix {
     font-weight: bold;
-    color: #555;
+    color: #606060;
+}
+
+.tag {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    color: #606060;
+}
+
+.tag:not(:first-child) {
+    margin-left: 15px;
+}
+
+.tags {
+    margin-top: 15px;
 }
 
 /*
