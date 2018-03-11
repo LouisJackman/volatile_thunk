@@ -13,11 +13,15 @@ DEFAULT_LANG = 'en'
 
 SUMMARY_HTML_SUFFIX = '<span class="summary-suffix">[…]</span>'
 
-PLUGIN_PATHS = ['plugins']
-PLUGINS = [
-    'summary_suffix_replacer',
-    'minify']
+PLUGIN_PATHS = [
+    'plugins/github.com/LouisJackman/pelican_summary_suffix_replacer',
+    'plugins/github.com/whiskyechobravo/pelican-open_graph']
 
+PLUGINS = [
+    'extended_sitemap',
+    'minify',
+    'open_graph',
+    'summary_suffix_replacer']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -37,8 +41,19 @@ MENUITEMS = [
     ('Tags', '/tags.html'),
     ('Projects', 'https://github.com/LouisJackman?tab=repositories')]
 
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
-SITEMAP_SAVE_AS = 'sitemap.xml'
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 1,
+        'indexes': 0.5,
+        'pages': 0.5,
+    },
+    'changefreqs': {
+        'articles': 'always',
+        'indexes': 'hourly',
+        'pages': 'monthly'
+    }
+}
 
 STATIC_PATHS = ['images', 'robots.txt']
 EXTRA_PATH_METADATA = {

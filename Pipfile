@@ -7,8 +7,11 @@ name = "pypi"
 
 [packages]
 
-pelican = "*"
+bs4 = "*"
+s3cmd = "*"
 markdown = "*"
+pelican = "*"
+pelican-extended-sitemap = "*"
 pelican-minify = "*"
 typogrify = "*"
 

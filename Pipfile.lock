@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "36d602841ff3a5e6ab7d23cecf4c6efcc03d0d0e04c79f56cd47ce9d7621bbe0"
+            "sha256": "cf7f3ed6fde29219b613f6c069d1e2bfc60d1fd41160bdc76af0a6c7b6634e29"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,11 +16,24 @@
         ]
     },
     "default": {
+        "beautifulsoup4": {
+            "hashes": [
+                "sha256:11a9a27b7d3bddc6d86f59fb76afb70e921a25ac2d6cc55b40d072bd68435a76",
+                "sha256:808b6ac932dccb0a4126558f7dfdcf41710dd44a4ef497a0bb59a77f9f078e89"
+            ],
+            "version": "==4.6.0"
+        },
         "blinker": {
             "hashes": [
                 "sha256:471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6"
             ],
             "version": "==1.4"
+        },
+        "bs4": {
+            "hashes": [
+                "sha256:36ecea1fd7cc5c0c6e4a1ff075df26d50da647b75376626cc186e2212886dd3a"
+            ],
+            "version": "==0.0.1"
         },
         "docutils": {
             "hashes": [
@@ -75,6 +88,12 @@
             ],
             "version": "==3.7.1"
         },
+        "pelican-extended-sitemap": {
+            "hashes": [
+                "sha256:757753ef7abf66cc9292aa831809729ff11f4fe152795a53d12251e71bbff851"
+            ],
+            "version": "==1.0.5"
+        },
         "pelican-minify": {
             "hashes": [
                 "sha256:a0ffa9b1f15089bc4aec4692c5feba87356d427a7946ffd8b6222ac4c7758773",
@@ -96,12 +115,25 @@
             ],
             "version": "==2.6.1"
         },
+        "python-magic": {
+            "hashes": [
+                "sha256:f2674dcfad52ae6c49d4803fa027809540b130db1dec928cfbb9240316831375",
+                "sha256:f3765c0f582d2dfc72c15f3b5a82aecfae9498bd29ca840d72f37d7bd38bfcd5"
+            ],
+            "version": "==0.4.15"
+        },
         "pytz": {
             "hashes": [
                 "sha256:07edfc3d4d2705a20a6e99d97f0c4b61c800b8232dc1c04d87e8554f130148dd",
                 "sha256:410bcd1d6409026fbaa65d9ed33bf6dd8b1e94a499e32168acfc7b332e4095c0"
             ],
             "version": "==2018.3"
+        },
+        "s3cmd": {
+            "hashes": [
+                "sha256:caf09f1473301c442fba6431c983c361c9af8bde503dac0953f0d2f8f2c53c8f"
+            ],
+            "version": "==2.0.1"
         },
         "six": {
             "hashes": [

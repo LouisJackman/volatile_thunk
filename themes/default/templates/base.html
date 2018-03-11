@@ -29,8 +29,19 @@
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
 
-        <meta name="theme-color" content="#000"/>
+        {% if article %}
+          {% for tag in article.ogtags %}
+            <meta property="{{tag[0]}}" content="{{tag[1]|striptags|e}}" />
+          {% endfor %}
+        {% endif %}
 
+        {% if page %}
+          {% for tag in page.ogtags %}
+            <meta property="{{tag[0]}}" content="{{tag[1]|striptags|e}}" />
+          {% endfor %}
+        {% endif %}
+
+        <meta name="theme-color" content="#000"/>
         <meta name="viewport" content="width=device-width,height=device-height">
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygment.css" />
