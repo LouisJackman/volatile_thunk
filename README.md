@@ -34,6 +34,16 @@ Pages are put in `content`, under `pages`. Their name is their title snake
 cased. They automatically appear on the main navigation menu. They are otherwise
 like posts.
 
+## Setup
+
+Git cloning must be recursive, as submodules are used for some plugins that are
+not on PyPi.
+
+`pipenv install` should be enough to install all required dependencies.
+
+Publishing should be done within a shell environment created from
+`pipenv shell`.
+
 ## Publish
 
 The blog can be generated with `pelican -s publishconf.py`.
