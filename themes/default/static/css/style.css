@@ -4,12 +4,6 @@
     border: none;
 }
 
-@font-face {
-    font-family: 'Karma';
-    font-weight: 'normal';
-    src: local('Karma Regular'), local('Karma-Regular'), url('../fonts/Karma-Regular.ttf');
-}
-
 body {
     background-color: #000;
     color: #bbb;
@@ -45,7 +39,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: Karma, serif;
+    font-family: serif;
     font-weight: normal;
 }
 
@@ -68,7 +62,7 @@ ul,
 body dl dt {
     line-height: 25px;
     letter-spacing: .5px;
-    font-family: Karma, serif;
+    font-family: serif;
     font-size: 15px;
     font-weight: lighter;
 }
@@ -121,7 +115,7 @@ body > dl dd:not(:last-child) {
 
 body > dl dd {
     color: #606060;
-    font-family: Karma, serif;
+    font-family: serif;
     font-weight: lighter;
 }
 
