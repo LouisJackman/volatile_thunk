@@ -1,3 +1,13 @@
+@font-face {
+   font-family: "Fira Sans";
+   src: url("../fonts/FiraSans-Regular.woff");
+}
+
+@font-face {
+   font-family: "Fira Sans Light";
+   src: url("../fonts/FiraSans-Light.woff");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +17,7 @@
 body {
     background-color: #000;
     color: #bbb;
-    font-family: serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: large;
     padding: 15px;
     margin-left: auto;
@@ -39,7 +49,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: serif;
+    font-family: "Fira Sans Light", sans-serif;
     font-weight: normal;
 }
 
@@ -49,7 +59,7 @@ h2.entry-title {
 }
 
 h2.entry-title a {
-    *text-decoration: none;
+    text-decoration: none;
 }
 
 p:not(:first-child) {
@@ -62,7 +72,7 @@ ul,
 body dl dt {
     line-height: 25px;
     letter-spacing: .5px;
-    font-family: serif;
+    font-family: "Fira Sans Light", sans-serif;
     font-size: 15px;
     font-weight: lighter;
 }
@@ -105,6 +115,14 @@ footer.post-info {
     margin-top: 25px;
 }
 
+blockquote {
+    color: #606060;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: #606060 solid 3px;
+}
+
 #content .paginator {
     margin-top: 45px;
 }
@@ -115,7 +133,7 @@ body > dl dd:not(:last-child) {
 
 body > dl dd {
     color: #606060;
-    font-family: serif;
+    font-family: "Fira Sans Light", sans-serif;
     font-weight: lighter;
 }
 
