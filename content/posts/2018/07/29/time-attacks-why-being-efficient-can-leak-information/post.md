@@ -95,12 +95,12 @@ of iterations through the string are complete.
 In fact, this problem can be generalised from loops to varying jumps in code. "Short-circuting" is the behaviour in
 almost all modern programming languages that ensures a second boolean isn't evaluated if the first automatically
 rules it out. It can cause varying jumps depending on the input data. If two booleans are used in an `if` and
-combined with a `&&`, the second operation won't be run at all if the first passes. So if it takes a lot longer to
+combined with a `||`, the second operation won't be run at all if the first passes. So if it takes a lot longer to
 reject a condition than average, an adversary could work out that the first condition passed, allowing them to narrow
 it down. This could be used for tricks like user enumeration.
 
 This often results in algorithms using various workarounds like dropping NOP operations into unexpected places, using
-bitwise operations to avoid shortcircuiting, and pretending all input data is the same length for the purposes of
+bitwise operations to avoid short-circuiting, and pretending all input data is the same length for the purposes of
 iteration.
 
 Ultimately, when writing higher level applications like webapps, we shouldn't worry too much about these kinds of
