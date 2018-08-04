@@ -4,6 +4,9 @@
         {% block head %}
         <meta charset="utf-8" />
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+        <meta http-equiv="Content-Security-Policy" content="style-src: 'self', default-src: 'none'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="referrer" content="strict-origin" />
 
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -42,10 +45,21 @@
           {% endfor %}
         {% endif %}
 
-        <meta name="theme-color" content="#000"/>
+        {% if SITE_DESCRIPTION %}
+          <meta name="description" content="{{ SITE_DESCRIPTION }}">
+        {% endif %}
+
+        {% if SITE_KEYWORDS %}
+          <meta name="keywords" content="{{ SITE_KEYWORDS | join(',') }}">
+        {% endif %}
+
+        <meta name="theme-color" content="#000">
+        <meta name="author" content="Louis Jackman">
         <meta name="viewport" content="width=device-width,height=device-height">
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygment.css" />
+        <link rel="author" href="{{ SITEURL }}/pages/about.html">
+        <meta name="generator" content="Pelican" />
 
         {% endblock head %}
 </head>

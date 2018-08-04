@@ -5,6 +5,17 @@ SITEURL = 'https://volatilethunk.com'
 ARTICLE_URL = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 ARTICLE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
+SITE_DESCRIPTION = "Louis Jackman's blog about infosec, backend development, and system administration."
+
+SITE_KEYWORDS = [
+    'Louis Jackman',
+    'blog',
+    'articles',
+    'infosec',
+    'backend development',
+    'sysadmin',
+    'system administration']
+
 PATH = 'content'
 
 TIMEZONE = 'Europe/London'
