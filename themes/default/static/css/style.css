@@ -5,10 +5,9 @@
 }
 
 body {
-    --secondary-text-color: #707070;
-    --quote-border-color: #989898;
+    --secondary-text-color: #757575;
 
-    background-color: #000;
+    background-color: black;
     color: #e1e1e1;
     font-family: system-ui, sans-serif;
     font-size: large;
@@ -95,7 +94,7 @@ footer.post-info {
 
 .post-info time.published {
     font-size: smaller;
-    color: #999;
+    color: var(--secondary-text-color);
 }
 
 .entry-content {
@@ -107,7 +106,7 @@ blockquote {
     margin-left: 20px;
     margin-top: 15px;
     padding-left: 15px;
-    border-left: var(--quote-border-color) solid 3px;
+    border-left: var(--secondary-text-color) solid 3px;
 }
 
 #content .paginator {
