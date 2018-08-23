@@ -1,3 +1,8 @@
+@font-face  {
+    font-family: 'EBGaramond-Regular';
+    src: url(../fonts/EBGaramond-Regular.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,11 +10,10 @@
 }
 
 body {
-    --secondary-text-color: #757575;
-
-    background-color: black;
-    color: #e1e1e1;
-    font-family: system-ui, sans-serif;
+    --secondary-text-color: #353535;
+    color: #333;
+    background-color: #dcc;
+    font-family: 'EBGaramond-Regular', serif;
     font-size: large;
     padding: 15px;
     margin-left: auto;
@@ -41,7 +45,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-weight: normal;
+    font-weight: bold;
 }
 
 h2.entry-title {
@@ -57,9 +61,9 @@ p,
 ul,
 .post-info time.published,
 body dl dt {
-    line-height: 25px;
+    line-height: 30px;
     letter-spacing: .5px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: lighter;
 }
 
@@ -69,7 +73,7 @@ body dl dt {
 }
 
 #post-list > li:not(:last-child) {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 header {
@@ -95,6 +99,7 @@ footer.post-info {
 .post-info time.published {
     font-size: smaller;
     color: var(--secondary-text-color);
+    font-weight: bold;
 }
 
 .entry-content {

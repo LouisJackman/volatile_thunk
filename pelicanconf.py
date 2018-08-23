@@ -41,7 +41,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-SUMMARY_MAX_LENGTH = 100
+SUMMARY_MAX_LENGTH = 125
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
