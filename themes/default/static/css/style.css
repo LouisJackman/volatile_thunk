@@ -10,9 +10,9 @@
 }
 
 body {
-    --secondary-text-color: #353535;
+    --secondary-text-color: #444;
     color: #333;
-    background-color: #dcc;
+    background-color: #d0cfc0;
     font-family: 'EBGaramond-Regular', serif;
     font-size: large;
     padding: 15px;
