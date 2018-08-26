@@ -39,10 +39,7 @@ like posts.
 Git cloning must be recursive, as submodules are used for some plugins that are
 not on PyPi.
 
-`pipenv install` should be enough to install all required dependencies.
-
-Publishing should be done within a shell environment created from
-`pipenv shell`.
+`pip3 install --user` should be enough to install all required dependencies.
 
 ## Publish
 
