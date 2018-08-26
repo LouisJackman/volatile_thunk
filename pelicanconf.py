@@ -1,11 +1,11 @@
 AUTHOR = 'Louis Jackman'
 SITENAME = 'Volatile Thunk'
-SITESUBTITLE = "Louis Jackman's Blog"
+SITESUBTITLE = "Louis Jackman's Website"
 SITEURL = 'https://volatilethunk.com'
 ARTICLE_URL = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 ARTICLE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
-SITE_DESCRIPTION = "Louis Jackman's blog about infosec, backend development, and system administration."
+SITE_DESCRIPTION = "Louis Jackman's website about information security, software development, and system administration."
 
 SITE_KEYWORDS = [
     'Louis Jackman',
@@ -66,7 +66,7 @@ SITEMAP = {
     }
 }
 
-STATIC_PATHS = ['images', 'robots.txt']
+STATIC_PATHS = ['images', 'cv', 'robots.txt']
 EXTRA_PATH_METADATA = {
     'robots.txt': {'path': 'robots.txt'}}
 

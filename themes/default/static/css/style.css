@@ -12,7 +12,7 @@
 body {
     --secondary-text-color: #444;
     color: #333;
-    background-color: #d0cfc0;
+    background-color: #d0c9c0;
     font-family: 'EBGaramond-Regular', serif;
     font-size: large;
     padding: 15px;
@@ -46,6 +46,11 @@ h3,
 h4,
 h5 {
     font-weight: bold;
+}
+
+hr {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 h2.entry-title {
