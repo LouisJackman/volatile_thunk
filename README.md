@@ -1,6 +1,6 @@
 # Volatile Thunk - Louis Jackman's Blog
 
-[![Known Vulnerabilities](https://snyk.io/test/github/LouisJackman/volatile_thunk/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/LouisJackman/volatile_thunk?targetFile=requirements.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/LouisJackman/volatile_thunk/badge.svg)](https://snyk.io/test/github/LouisJackman/volatile_thunk)
 
 ## Posts
 
