@@ -53,6 +53,10 @@ hr {
     padding-bottom: 20px;
 }
 
+.clearfix {
+    clear: both;
+}
+
 h2.entry-title {
     color: var(--secondary-text-color);
     font-size: larger;
@@ -93,8 +97,7 @@ header h2 {
 header h1 a strong {
     color: var(--secondary-text-color);
     display: block;
-    font-size: small;
-    font-weight: 1;
+    font-size: 20px;
 }
 
 footer.post-info {
@@ -169,4 +172,31 @@ li {
 
 body > li {
     list-style: none;
+}
+
+nav.landing-page {
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.landing-page li {
+    list-style: none;
+    position: relative;
+}
+
+.landing-page li {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.landing-page li h3 {
+    float: left;
+    text-align: right;
+    width: 12ex;
+}
+
+.landing-page li section {
+    float: right;
+    max-width: 40ex;
+    text-align: left;
 }

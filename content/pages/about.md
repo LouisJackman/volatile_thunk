@@ -2,23 +2,24 @@ Title: About
 Date: 2018-03-10 19:06
 Category: Meta
 
-I'm your host, Louis Jackman. Welcome to my website.
+I'm your host, Louis Jackman. Welcome to my site.
 
 I live in the UK and specialise in information security and software
 development. I can do system administration, but that interest only goes so far
 as to support other areas I'm interested in. This website's articles are mostly
 around these topics, albeit with many diversions.
 
-My CV can be found as [here](/theme/cv.html); more information is provided on my
-[LinkedIn profile](https://uk.linkedin.com/in/louis-jackman).
+My CV can be found as [here](/theme/cv/cv.html). Contact information like my
+[LinkedIn profile](https://uk.linkedin.com/in/louis-jackman) can be found on the
+[contact page](/pages/contact.html).
 
 ***
 
-My work has led to confidence with Linux, AWS, Python, Ansible, system
-hardening, ISMSes, REST/HTTP, Terraform, Docker, and Java and its Spring
-ecosystem.  I've also dabbled in Kubernetes, TypeScript, Selenium, WordPress,
-Ruby, Heroku, various versions of Angular, React, redux, redux-observable, RxJS,
-and macOS. Dabbling isn't the same as being adept, of course.
+I've worked with Linux, AWS, Python, Ansible, system hardening, ISMSes,
+REST/HTTP, Terraform, Docker, and Java and its Spring ecosystem.  I've also
+dabbled in Kubernetes, TypeScript, Selenium, WordPress, Ruby, Heroku, various
+versions of Angular, React, redux, redux-observable, RxJS, and macOS. Dabbling
+isn't the same as being adept, of course.
 
 JavaScript and Rust feature heavily in my personal projects, with C and Python
 also showing up from time to time. I've used Rust since 0.15, but it has

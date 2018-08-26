@@ -14,7 +14,8 @@ SITE_KEYWORDS = [
     'infosec',
     'backend development',
     'sysadmin',
-    'system administration']
+    'system administration'
+]
 
 PATH = 'content'
 
@@ -24,15 +25,19 @@ DEFAULT_LANG = 'en'
 
 SUMMARY_HTML_SUFFIX = '<span class="summary-suffix">[…]</span>'
 
+INDEX_SAVE_AS = 'articles.html'
+
 PLUGIN_PATHS = [
     'plugins/github.com/LouisJackman/pelican_summary_suffix_replacer',
-    'plugins/github.com/whiskyechobravo/pelican-open_graph']
+    'plugins/github.com/whiskyechobravo/pelican-open_graph'
+]
 
 PLUGINS = [
     'extended_sitemap',
     'minify',
     'open_graph',
-    'summary_suffix_replacer']
+    'summary_suffix_replacer'
+]
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -47,10 +52,13 @@ SUMMARY_MAX_LENGTH = 125
 RELATIVE_URLS = True
 
 MENUITEMS = [
-    ('Articles', '/'),
+    ('Articles', '/articles.html'),
     ('Archives', '/archives.html'),
     ('Tags', '/tags.html'),
-    ('Projects', 'https://github.com/LouisJackman?tab=repositories')]
+    ('About', '/pages/about.html'),
+    ('Projects', 'https://github.com/LouisJackman?tab=repositories'),
+    ('Contact', '/pages/contact.html')
+]
 
 SITEMAP = {
     'format': 'xml',
@@ -74,9 +82,10 @@ GITHUB_URL = 'https://github.com/LouisJackman'
 
 # Social widget
 SOCIAL = [
-    ('Stack Exchange', 'https://stackexchange.com/users/2032836/ljackman')]
+    ('Stack Exchange', 'https://stackexchange.com/users/2032836/ljackman')
+]
 
-#DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 
 DEFAULT_PAGINATION = 10
 DISPLAY_CATEGORIES_ON_MENU = False
