@@ -14,6 +14,8 @@ waving goodbye to comprehensible stacktraces, and dividing the technology stack
 into two incompatible parts: the old blocking libraries and the new non-blocking
 ones.
 
+***
+
 Pausing execution while waiting for something to return a value is seen as
 _blocking_ but is actually being _synchronous_. While non-blocking asynchronous
 code is encouraged and the industry increasingly discourages blocking
@@ -152,6 +154,8 @@ performance. This is even more true for JavaScript and Python.
 
 If you're working in C, C++, or Rust, then you possibly _are_ working in a
 domain in which a lightweight task runtime is prohibitive.
+
+***
 
 *Like manual memory management, explicitly asynchronous APIs should reside
 solely in the realm of systems and high-performance programming.*

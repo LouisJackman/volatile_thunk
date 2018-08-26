@@ -12,6 +12,8 @@ In case you thought this blog's design looked prehistoric enough, it's being
 started with a post about following concurrency patterns rooted in the era in
 which the mouse was a keen invention.
 
+***
+
 The key construct behind process-based Unix concurrency is the
 [fork](https://linux.die.net/man/2/fork) system call. It's practically a
 paradox: one program calls it yet two programs finish calling it to move on.
@@ -384,6 +386,8 @@ Signalling is one of the simplest forms of Unix IPC. It's enough to coordinate
 processes, but does not allow sending messages with payloads. Domain sockets,
 networking connections, and other IPC systems allow a programmer to go a lot
 further.
+
+***
 
 If Unix IPC is such a powerful and battle-tested standard for parallelisation
 and concurrency, why isn't it the primary port of call for solving such problems

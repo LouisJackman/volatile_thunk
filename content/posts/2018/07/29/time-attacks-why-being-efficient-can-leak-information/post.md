@@ -18,6 +18,8 @@ scripts driving high-level computations for biologists. The performance concerns
 abstraction throughout but all seek the same: the machine taking less time and power to get the same result at the
 level of required precision.
 
+***
+
 The time taken to compute some data is one of its pieces of metadata. For a domain of data, the data computable
 within a specific window of time is usually a subset. Whether that's a problem depends on a few variables: how
 sensitive the data is, whether an adversary can accurately observe the time taken to compute it, and how useful that
@@ -37,6 +39,8 @@ plaintext candidates, one of which is the leaked one, and they use the leaked si
 A less obvious case is the different times to encrypt documents of the same size but with different content. Modern
 ciphers make this damn difficult precisely because they are designed to avoid timing attacks, often by using
 constant-time operations.
+
+***
 
 What about operations which don't involve cryptography but straightforward equality checking? Most algorithm's like
 C's `strcmp` or `==` used with strings in JavaScript and Python just iterate through the two strings, returning
@@ -102,6 +106,8 @@ it down. This could be used for tricks like user enumeration.
 This often results in algorithms using various workarounds like dropping NOP operations into unexpected places, using
 bitwise operations to avoid short-circuiting, and pretending all input data is the same length for the purposes of
 iteration.
+
+***
 
 Ultimately, when writing higher level applications like webapps, we shouldn't worry too much about these kinds of
 timing attacks except for the most glaring of cases. Differences in timings will often be drowned out by other

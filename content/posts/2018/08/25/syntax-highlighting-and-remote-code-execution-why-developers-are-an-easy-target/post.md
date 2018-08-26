@@ -23,6 +23,8 @@ plugin is VimScript being so horrible that even the most dedicated adversary
 would throw their laptop out of the window before completing a successful
 exploit.
 
+***
+
 Let's assess the extent of the problem through the setup process of a new
 developer.
 
@@ -32,14 +34,16 @@ developers leads to RCE over countless developers' machines. The encouragement
 to update frequently means even a short window of compromise will hit many
 users.
 
-An editor or IDE is installed: VSCode, Atom, Sublime, IntelliJ, PyCharm, Vim. We
-pile on the plugins for the tech stacks we use: better autocomplete for Go; the
-Redux plugin that heavily-clapped Medium post mentioned; the ESLint plugin
-brought up at the last JS meetup.
+An editor or IDE is installed: VSCode, Atom, Sublime, IntelliJ, PyCharm, Vim.
+They pile on the plugins for the tech stacks they use: better autocomplete for
+Go; the Redux plugin that heavily-clapped Medium post mentioned; the ESLint
+plugin brought up at the last JS meetup.
 
 Installing them is easy. Auditing them is harder. Worst of all, isolating them
 from sensitive data on the rest of your computer is far more difficult than it
 should be.
+
+***
 
 We're suspicious of piracy websites with nefarious scripts despite their running
 within a sandboxed browser, yet we happily install random Homebrew recipes that
@@ -84,6 +88,8 @@ compromised](https://www.exploit-db.com/exploits/21314/) by nothing more than
 an off-by-one error. Are we confident the developer community would find it
 quickly, or would it sit around uncovered for years like Heartbleed?
 
+***
+
 Text editors and IDEs are another area we developers must be frank about. It has
 all of the problems of libraries but with additional nuances. Most editors have
 no proper isolation for their plugins. If a new ELisp package is loaded into
@@ -104,6 +110,8 @@ into the remote servers you log in to and tamper with emails you write in GNUS.
 
 (I lament the lack of a modern, secure, GUI-first Lisp Machine-inspired
 development environment. That will be the focus of a future post.)
+
+***
 
 With companies pushing agile development and DevOps, it's increasingly likely
 that developers have keys to the kingdom or at least some important parts of it.

@@ -35,6 +35,8 @@ being a Java string like any other, it has constructs that cause unintended
 semantics in the inner language, and it needs to transform it to match expected
 behaviour.
 
+***
+
 Lest this sound like pointless theorising, let's get to the point of this post:
 seeing escaping just as a "library feature we use to secure this code" and
 ignoring the theory of language embedding and escaping will lead to security
@@ -204,6 +206,8 @@ flow, and perhaps even removing it from the DOM when done with `.removeChild`.
 Escaping out of the inner language by using the outer language, the restricted
 character set suddenly went from being quite restrictive into allowing
 remote-script execution.
+
+***
 
 There are easy ways to fix those examples. If the JavaScript whitelister used
 a real parser rather than regular expressions, `</` would be thrown out.
