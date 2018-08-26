@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    background-color: #111;
+    color: #bbb;
+    --secondary-text-color: #444
+    font-family: sans-serif;
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 65ex;
+    padding: 15px;
+}
+
+header {
+    text-align: center;
+}
+
+header nav {
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+}
+
+header nav a {
+    color: inherit;
+}
+
+header nav a:not(:last-child) {
+    margin-right: 15px;
+}
+
+main {
+    margin-top: 25px;
+}
+
+main section h2 {
+    color: inherit;
+    margin-top: 45px;
+    text-align: center;
+}
+
+main section li {
+    list-style: none;
+    margin-top: 35px;
+}
+
+main section li:first-child {
+    margin-top: 20px;
+}
+
+main section li h3 {
+    color: var(--secondary-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Futura, sans-serif;
+    font-weight: lighter;
+}
+
+p {
+    margin-top: 15px;
+    line-height: 1.5em;
+    letter-spacing: .5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+
+@media screen {
+
+    .print {
+        display: none;
+    }
+}
+
+@media print {
+
+    body {
+        color: black;
+        font-family: serif;
+        font-size: small;
+        max-width: 100%;
+    }
+
+    header nav a {
+        color: #656565;
+        text-decoration: none;
+    }
+
+    main {
+        margin-top: 10px;
+    }
+
+    main section h2 {
+        margin-top: 25px;
+        color: #656565;
+        text-align: center;
+    }
+
+    main section li h3 {
+        color: #656565;
+    }
+
+    main section h2 {
+        margin-left: 160px;
+        text-align: left;
+    }
+
+    main section li p {
+        margin-left: 160px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: Bodini, serif;
+    }
+
+    p {
+        font-family: Baskerville, serif;
+    }
+
+    .screen {
+        display: none;
+    }
+}
+
+@media (min-width: 800px),
+@media print {
+
+    main section li h3 {
+        float: left;
+        padding-right: 10px;
+        margin-right: 10px;
+        width: 10ex;
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    main section h2 {
+        margin-top: 75px;
+    }
+
+    main section li:first-child {
+        margin-top: 45px;
+    }
+
+    main section h2 {
+        margin-left: 225px;
+        text-align: left;
+    }
+
+    main section li p {
+        margin-left: 225px;
+    }
+}
