@@ -176,27 +176,43 @@ body > li {
 
 nav.landing-page {
     max-width: 500px;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 
 .landing-page li {
     list-style: none;
-    position: relative;
-}
-
-.landing-page li {
-    display: block;
     margin-bottom: 50px;
 }
 
 .landing-page li h3 {
-    float: left;
-    text-align: right;
-    width: 12ex;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .landing-page li section {
-    float: right;
-    max-width: 40ex;
+    max-width: 100%;
     text-align: left;
+}
+
+@media (min-width: 600px) {
+
+    nav.landing-page {
+        margin: 40px;
+    }
+
+    .landing-page li {
+        display: block;
+        position: relative;
+    }
+
+    .landing-page li h3 {
+        float: left;
+        text-align: right;
+        width: 12ex;
+    }
+
+    .landing-page li section {
+        float: right;
+        max-width: 40ex;
+    }
 }
