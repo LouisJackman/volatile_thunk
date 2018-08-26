@@ -1,5 +1,7 @@
 # Volatile Thunk - Louis Jackman's Blog
 
+[![Known Vulnerabilities](https://snyk.io/test/github/LouisJackman/volatile_thunk/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/LouisJackman/volatile_thunk?targetFile=requirements.txt)
+
 ## Posts
 
 Posts are put in `content`, under the subdirectory `$Y/$M/$D/$SLUGLINE`, where:
