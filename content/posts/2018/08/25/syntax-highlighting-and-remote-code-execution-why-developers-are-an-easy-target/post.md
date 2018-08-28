@@ -78,7 +78,7 @@ ESLint was compromised with the subtlety of a drunkard brawling outside a
 British town centre at 2am, brazenly `eval`ing content from Pastebin.  While I
 applaud the quick responses of the teams backing these compromised OSS projects,
 a job they do for free in their spare time lest we forget, what does it say
-about the impact of a sophisticated, stealthy compromise from at adversary worth
+about the impact of a sophisticated, stealthy compromise from an adversary worth
 their salt?
 
 What about one that doesn't force push over the version control history,
