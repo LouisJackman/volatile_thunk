@@ -2,6 +2,14 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/LouisJackman/volatile_thunk/badge.svg)](https://snyk.io/test/github/LouisJackman/volatile_thunk)
 
+
+## Synopsis
+
+My website, using static page generation via Python 3.6 onwards and Pelican.
+
+Python 2 is not tested, and one of the pelican plugins in use only works on
+Python 3.
+
 ## Posts
 
 Posts are put in `content`, under the subdirectory `$Y/$M/$D/$SLUGLINE`, where:
@@ -41,7 +49,25 @@ like posts.
 Git cloning must be recursive, as submodules are used for some plugins that are
 not on PyPi.
 
-`pip3 install --user` should be enough to install all required dependencies.
+A virtualenv should be setup like this, which is a one-off operation:
+```shell
+python3 -m venv .venv
+```
+
+When working on Volatile Thunk, be sure to enter the virtualenv and leave when
+you're done:
+```shell
+source .venv/bin/activate
+
+# [...]
+
+deactivate
+```
+
+When inside the virtualenv, install the required packages:
+```shell
+pip3 install -r requirements.txt
+```
 
 ## Publish
 
