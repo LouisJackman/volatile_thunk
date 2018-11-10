@@ -1,6 +1,6 @@
 @font-face  {
-    font-family: 'EBGaramond-Regular';
-    src: url(../fonts/EBGaramond-Regular.ttf);
+    font-family: 'LibreBaskerville-Regular';
+    src: url(../fonts/LibreBaskerville-Regular.ttf);
 }
 
 * {
@@ -13,8 +13,8 @@ body {
     --secondary-text-color: #444;
     color: #333;
     background-color: #d0c9c0;
-    font-family: 'EBGaramond-Regular', serif;
-    font-size: large;
+    font-family: 'LibreBaskerville-Regular', serif;
+    font-size: medium;
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -38,6 +38,10 @@ nav li {
 
 a {
     color: inherit;
+}
+
+h1 {
+    font-size: 30px;
 }
 
 h1,
@@ -72,7 +76,7 @@ ul,
 body dl dt {
     line-height: 30px;
     letter-spacing: .5px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: lighter;
 }
 
@@ -97,7 +101,7 @@ header h2 {
 header h1 a strong {
     color: var(--secondary-text-color);
     display: block;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 footer.post-info {
