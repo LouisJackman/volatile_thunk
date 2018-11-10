@@ -4,3 +4,4 @@ __pycache__
 output
 pelican.pid
 srv.pid
+.venv
