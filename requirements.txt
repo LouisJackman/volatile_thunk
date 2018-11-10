@@ -1,3 +1,4 @@
+awscli==1.16.52
 beautifulsoup4==4.6.3
 markdown==2.6.11
 pelican==3.7.1
