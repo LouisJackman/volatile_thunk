@@ -89,6 +89,12 @@ body dl dt {
     margin-bottom: 70px;
 }
 
+p.info {
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
 header {
     text-align: center;
     margin-bottom: 7px;
@@ -172,6 +178,17 @@ li {
 
 .tags {
     margin-top: 15px;
+}
+
+.full-tags-list {
+    text-align: center;
+}
+
+.full-tags-list li {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 4px 7px;
+    margin-left: 10px;
 }
 
 body > li {
