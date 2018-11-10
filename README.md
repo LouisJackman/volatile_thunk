@@ -47,7 +47,10 @@ like posts.
 ## Setup
 
 Git cloning must be recursive, as submodules are used for some plugins that are
-not on PyPi.
+not on PyPi:
+```shell
+git clone --recursive https://github.com/LouisJackman/volatile_thunk.git
+```
 
 A virtualenv should be setup like this, which is a one-off operation:
 ```shell
