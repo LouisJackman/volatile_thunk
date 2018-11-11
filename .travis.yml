@@ -4,5 +4,6 @@ python:
 script:
   - make publish
 deploy:
+  skip_cleanup: true
   provider: script
   script: make upload

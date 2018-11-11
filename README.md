@@ -1,6 +1,6 @@
 # Volatile Thunk - Louis Jackman's Blog
 
-[![Known Vulnerabilities](https://snyk.io/test/github/LouisJackman/volatile_thunk/badge.svg)](https://snyk.io/test/github/LouisJackman/volatile_thunk)
+[![Known Vulnerabilities](https://snyk.io/test/github/LouisJackman/volatile_thunk/badge.svg)](https://snyk.io/test/github/LouisJackman/volatile_thunk) [![Build Status](https://travis-ci.org/LouisJackman/volatile_thunk.svg?branch=master)](https://travis-ci.org/LouisJackman/volatile_thunk)
 
 
 ## Synopsis
