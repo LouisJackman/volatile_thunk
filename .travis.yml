@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.6"
+script:
+  - make publish
+deploy:
+  provider: script
+  script: make upload
