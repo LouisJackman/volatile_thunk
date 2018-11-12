@@ -34,7 +34,6 @@ PLUGIN_PATHS = [
 
 PLUGINS = [
     'extended_sitemap',
-    'minify',
     'open_graph',
     'summary_suffix_replacer'
 ]

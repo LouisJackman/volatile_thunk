@@ -7,6 +7,9 @@ from pathlib import Path
 sys.path.append(str(Path.cwd()))
 from pelicanconf import *
 
+
+PLUGINS.append('minify')
+
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
