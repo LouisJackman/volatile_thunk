@@ -25,7 +25,7 @@
     <ul class="tags">
         {% for tag in article.tags %}
         <li class="tag">
-            <a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a>
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
         </li>
         {% endfor %}
     </ul>
