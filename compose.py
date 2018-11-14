@@ -4,8 +4,9 @@ import subprocess
 import re
 from datetime import datetime
 from os import environ
+from shutil import which
 from textwrap import dedent
-from typing import Set
+from typing import Optional, Set
 from pathlib import Path
 
 
@@ -52,19 +53,25 @@ def make_post_file(title: str, tags: Set[str]) -> Path:
     return path
 
 
-def get_editor() -> str:
+def get_editor() -> Optional[str]:
     if 'VISUAL' in environ:
         result = environ['VISUAL']
     elif 'EDITOR' in environ:
         result = environ['EDITOR']
-    else:
+    elif which('vi') is not None:
         result = 'vi'
+    else:
+        result = None
     return result
 
 
-def edit(path: Path) -> subprocess.CompletedProcess:
+def edit(path: Path) -> None:
     editor = get_editor()
-    return subprocess.check_call([editor, str(path)])
+    if editor is not None:
+        subprocess.check_call([
+            editor,
+            str(path)
+        ])
 
 
 def main():
