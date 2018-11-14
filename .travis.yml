@@ -6,7 +6,7 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: make upload
+  script: make s3_upload
 env:
   global:
   - secure: prPgEH4INy4r+Otmk4iWUvV/onV/Rk5UvYT6RtCjIcZsELXvepInRPUIyY/XV0fCpAhPNFQS6Nsr5X+3vqFD9YxN8edDK/AdxkZk/lA7qBd8TnuXCsGT5kmIweT2CisJtEfIe2pcZsgDi5hG8y6Kz/eurcr1PvC4ZY85OxZ9BG6anbsgOjJYEhgfYNcU3EZuo0mJlUSaTt4eLkN3pe6XbOTM+63Gcat1NQaNuk5oAUo93VWJmililVqln+olLD0N6Bstq+9I/oRvcgXIW1UYBeVqq/Vc+ILyKFl9+ISEAnAJcP23qQs95w5qg0sdhTWcrwbzxyH55PBZfAkB5jCiTFxQBBc4q2tvx4/XOfanBGLYmQ+Z29E3oFim4C/AB+GUv/yZgcZ4Tdrz9ohQrMiqiuwrzEjjTeR9qemWYVrT/zt6kWAzBVnqjsidU9d1C1tz5m17fLO61Wm0xTmpcRm9WV0iLB7Ai4vSFzR+2ri+0KF7K6hjA+mpp/a8op/W/yfVTd8aH0IG9cyAQaero4UuS/S2qAjv0RHLi5vk6JBQ7nHAX1L0LswZhVm7WsOD6JFPAy2iulRYfFU/lVKR0fon6V6goaH5hKOtg7aZiUBr9pAGiVMPLsBBUI8H2QNVmriQAC7Gym1dZgcWFvDos+Wz2xbtNZdOGvaMMuYMlWWThm8=
