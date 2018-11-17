@@ -104,7 +104,7 @@ def extract_article_title(article_path: Path) -> str:
 
 class NoMatchingArticleFoundError(RuntimeError):
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__('No matching article found.')
 
 
@@ -134,7 +134,7 @@ def make_article_path(year: int, month: int, day: int) -> Path:
     return path
 
 
-def commit():
+def commit() -> None:
     latest = find_latest()
     if latest is None:
         raise NoMatchingArticleFoundError()
@@ -148,7 +148,7 @@ def commit():
     subprocess.check_call(['git', 'commit', '-m', commit_message])
 
 
-def publish():
+def publish() -> None:
     subprocess.call(['git', 'show', 'HEAD'])
     if confirm('Do you want to push that?'):
         subprocess.call(['git', 'push'])

@@ -15,8 +15,7 @@ def title_to_path_component(title: str) -> str:
     return re.sub(r'[^\w-]', '', without_spaces)
 
 
-def make_path(title: str, when: datetime) -> Path:
-    day, month, year = when.day, when.month, when.year
+def make_path(title: str, year: int, month: int, day: int) -> Path:
     title_component = title_to_path_component(title)
 
     return (
@@ -35,7 +34,7 @@ def make_post_file(title: str, tags: Set[str]) -> Path:
     year, month, day = now.year, now.month, now.day
     hour, minute = now.hour, now.minute
 
-    path = make_path(title, now)
+    path = make_path(title, year, month, day)
     tags = ', '.join(tags)
 
     header = dedent(f'''

@@ -1,6 +1,7 @@
 awscli==1.16.52
 beautifulsoup4==4.6.3
 markdown==2.6.11
+mypy==0.641
 pelican==4.0.0
 pelican-extended-sitemap==1.0.5
 pelican-minify==0.9
