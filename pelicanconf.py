@@ -73,9 +73,17 @@ SITEMAP = {
     }
 }
 
-STATIC_PATHS = ['images', 'cv', 'robots.txt']
+STATIC_PATHS = [
+    '.well-known/keybase.txt',
+    'cv',
+    'images',
+    'robots.txt',
+]
+
 EXTRA_PATH_METADATA = {
-    'robots.txt': {'path': 'robots.txt'}}
+    'robots.txt': {'path': 'robots.txt'},
+    '.well-known/keybase.txt': {'path': '.well-known/keybase.txt'},
+}
 
 GITHUB_URL = 'https://github.com/LouisJackman'
 
