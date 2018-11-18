@@ -124,6 +124,12 @@ footer.post-info {
     margin-top: 25px;
 }
 
+strong.back-to-the-top {
+    margin-top: 25px;
+    display: block;
+    text-align: right;
+}
+
 blockquote {
     color: var(--secondary-text-color);
     margin-left: 20px;
