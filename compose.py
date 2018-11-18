@@ -35,12 +35,12 @@ def make_post_file(title: str, tags: Set[str]) -> Path:
     hour, minute = now.hour, now.minute
 
     path = make_path(title, year, month, day)
-    tags = ', '.join(tags)
+    tags_field = ', '.join(tags)
 
     header = dedent(f'''
         Title: {title}
         Date: {year:04}-{month:02}-{day:02} {hour:02}:{minute:02}
-        Tags: {tags}
+        Tags: {tags_field}
 
 
     ''').lstrip()
@@ -53,6 +53,7 @@ def make_post_file(title: str, tags: Set[str]) -> Path:
 
 
 def get_editor() -> Optional[str]:
+    result: Optional[str]
     if 'VISUAL' in environ:
         result = environ['VISUAL']
     elif 'EDITOR' in environ:

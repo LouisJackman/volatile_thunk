@@ -2,6 +2,7 @@ language: python
 python:
 - '3.6'
 script:
+- mypy compose.py publish.py
 - make publish
 deploy:
   skip_cleanup: true

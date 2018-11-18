@@ -93,8 +93,8 @@ def extract_article_time(article_path: Path) -> ArticleTime:
     field = extract_field(article_path, 'Date')
     hour, minute = field.split()[1].split(':')
     return ArticleTime(
-        hour=hour,
-        minute=minute
+        hour=int(hour),
+        minute=int(minute)
     )
 
 
