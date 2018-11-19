@@ -7,15 +7,21 @@ from sys import exit
 from typing import NamedTuple, Optional, List
 
 
+def git(*cmd_args, **kwargs) -> None:
+    subprocess.check_call(['git', *cmd_args], **kwargs)
+
+
 def confirm(message: str) -> bool:
     confirmation = input(f'{message} (y/n): ')
     return confirmation.lower().strip() == 'y'
 
 
-def review() -> None:
+def review(article_path: Path) -> None:
+    git('add', str(article_path))
+
     satisfied = False
     while not satisfied:
-        subprocess.check_call(['git', 'diff'])
+        git('diff', '--staged')
         satisfied = confirm('Do you want to commit that?')
 
 
@@ -108,7 +114,12 @@ class NoMatchingArticleFoundError(RuntimeError):
         super().__init__('No matching article found.')
 
 
-def make_article_path(year: int, month: int, day: int) -> Path:
+def find_article_path() -> Path:
+    latest = find_latest()
+    if latest is None:
+        raise NoMatchingArticleFoundError()
+    year, month, day = latest.year, latest.month, latest.day
+
     base_path = (
         Path('content')
         / 'posts'
@@ -134,36 +145,30 @@ def make_article_path(year: int, month: int, day: int) -> Path:
     return path
 
 
-def commit() -> None:
-    latest = find_latest()
-    if latest is None:
-        raise NoMatchingArticleFoundError()
-
-    year, month, day = latest.year, latest.month, latest.day
-    article_path = make_article_path(year, month, day)
+def commit(article_path: Path) -> None:
     title = extract_article_title(article_path)
-
     commit_message = f'Publish "{title}"'
-    subprocess.check_call(['git', 'add', str(article_path)])
-    subprocess.check_call(['git', 'commit', '-m', commit_message])
+    git('commit', '-m', commit_message)
 
 
 def publish() -> None:
-    subprocess.call(['git', 'show', 'HEAD'])
+    git('show', 'HEAD')
     if confirm('Do you want to push that?'):
-        subprocess.call(['git', 'push'])
+        git('push')
     else:
         print("When you're ready to publish, run 'git push'.")
 
 
 def main() -> None:
-    review()
     try:
-        commit()
+        article_path = find_article_path()
+
+        review(article_path)
+        commit(article_path)
+        publish()
     except (NoSuchFieldToExtractError, NoMatchingArticleFoundError) as error:
         print(f'An error occured: {error}')
         exit(-1)
-    publish()
 
 
 if __name__ == '__main__':
