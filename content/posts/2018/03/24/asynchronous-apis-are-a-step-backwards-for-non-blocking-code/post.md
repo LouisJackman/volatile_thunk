@@ -1,4 +1,4 @@
-Title: Asynchronous APIs are Step Backwards for Non-Blocking Code
+Title: Asynchronous APIs are a Step Backwards for Non-Blocking Code
 Date: 2018-03-22 20:14
 Tags: concurrency, plt
 
