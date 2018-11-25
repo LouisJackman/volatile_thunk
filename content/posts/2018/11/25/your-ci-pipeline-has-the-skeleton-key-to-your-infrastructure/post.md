@@ -21,7 +21,7 @@ complexity caused by orchestrating many smaller services.
 
 This can hardly be worse than developers deploying from their laptops, which
 really doesn't scale as companies grow. The server can be more focussed than a
-developer's laptop, narrowing the possible attack vectors. That said, developer
+developer's laptop, narrowing possible attack vectors. That said, developer
 devices generally aren't publicly exposed to a network and accessible via a
 domain name that is probably trivial to enumerate and running CI services like
 [Atlassian Bamboo](https://www.atlassian.com/software/bamboo) or
