@@ -146,7 +146,7 @@ If your application can afford garbage collection and dynamic dispatch for
 polymorphism, it can probably afford a lightweight task runtime too.
 
 Like garbage collection it's ultimately trading off a bit of performance, in
-this case memory, to make programming less error-prone and robust.
+this case memory, to make programming less error-prone and more robust.
 
 If you're programming in Java or C# you're almost certainly already working on
 a problem for which a lightweight task system has perfectly acceptable
