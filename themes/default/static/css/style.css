@@ -221,6 +221,44 @@ nav.landing-page {
     text-align: left;
 }
 
+@keyframes show-back-to-top {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-back-to-top {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+a.back-to-the-top {
+    animation: hide-back-to-top 1s;
+    opacity: 0;
+}
+
+a.back-to-the-top.active {
+    animation: show-back-to-top 1s;
+    border-radius: 5px;
+    border: 1px solid black;
+    bottom: 20px;
+    font-size: 40px;
+    height: 50px;
+    opacity: 1;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+}
+
 @media (min-width: 600px) {
 
     nav.landing-page {
