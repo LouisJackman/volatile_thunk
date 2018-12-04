@@ -11,6 +11,7 @@
 
 body {
     --secondary-text-color: #444;
+    --tertiary-text-colour: #666;
     color: #333;
     background-color: #d0c9c0;
     font-family: 'LibreBaskerville-Regular', serif;
@@ -32,8 +33,8 @@ nav {
 
 nav li {
     display: inline;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 a {
@@ -97,7 +98,6 @@ p.info {
 
 header {
     text-align: center;
-    margin-bottom: 7px;
 }
 
 header h2 {
@@ -105,9 +105,10 @@ header h2 {
 }
 
 header h1 a strong {
-    color: var(--secondary-text-color);
+    color: var(--tertiary-text-colour);
+    padding-top: 2px;
     display: block;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 footer.post-info {
@@ -265,6 +266,12 @@ a.back-to-the-top {
 }
 
 @media (min-width: 600px) {
+
+
+    nav li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 
     nav.landing-page {
         margin: 40px;

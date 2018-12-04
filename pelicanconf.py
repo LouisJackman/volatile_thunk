@@ -52,8 +52,6 @@ RELATIVE_URLS = True
 
 MENUITEMS = [
     ('Articles', '/articles.html'),
-    ('Archives', '/archives.html'),
-    ('Tags', '/tags.html'),
     ('About', '/pages/about.html'),
     ('Projects', 'https://github.com/LouisJackman?tab=repositories'),
     ('Contact', '/pages/contact.html')
