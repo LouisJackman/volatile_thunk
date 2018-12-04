@@ -239,24 +239,29 @@ nav.landing-page {
     }
 }
 
-a.back-to-the-top {
+.back-to-the-top {
     animation: hide-back-to-top 1s;
+    display: block;
     opacity: 0;
+    background-color: inherit;
+    border-radius: 3px;
+    border: 1px solid black;
+    bottom: 10px;
+    font-size: 28px;
+    height: 35px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    width: 35px;
 }
 
-a.back-to-the-top.active {
+.back-to-the-top.active {
     animation: show-back-to-top 1s;
-    border-radius: 5px;
-    border: 1px solid black;
-    bottom: 20px;
-    font-size: 40px;
-    height: 50px;
     opacity: 1;
-    position: fixed;
-    right: 20px;
-    text-align: center;
+}
+
+a.back-to-the-top {
     text-decoration: none;
-    width: 50px;
 }
 
 @media (min-width: 600px) {
@@ -279,5 +284,14 @@ a.back-to-the-top.active {
     .landing-page li section {
         float: right;
         max-width: 40ex;
+    }
+
+    .back-to-the-top {
+        border-radius: 5px;
+        bottom: 20px;
+        font-size: 40px;
+        height: 50px;
+        right: 20px;
+        width: 50px;
     }
 }

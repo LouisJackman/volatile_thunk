@@ -2,7 +2,7 @@
     "use strict";
 
     var backToTheTopElement = document.querySelector(
-        "a.back-to-the-top"
+        ".back-to-the-top"
     );
 
     window.addEventListener("scroll", function () {
