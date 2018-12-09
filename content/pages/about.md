@@ -9,9 +9,9 @@ development. I can do system administration, but that interest only goes so far
 as to support other areas I'm interested in. This website's articles are mostly
 around these topics, albeit with many diversions.
 
-My CV can be found as [here](/theme/cv/cv.html). Contact information like my
-[LinkedIn profile](https://uk.linkedin.com/in/louis-jackman) can be found on the
-[contact page](/pages/contact.html).
+My CV can be found as [here](/theme/cv/louis-jackman-cv.pdf). Contact
+information like my [LinkedIn profile](https://uk.linkedin.com/in/louis-jackman)
+can be found on the [contact page](/pages/contact.html).
 
 ***
 
