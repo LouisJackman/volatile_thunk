@@ -1,6 +1,7 @@
 Title: WebAssembly: a Security Engineer's Review
 Date: 2018-11-18 10:16
 Tags: security, plt, web
+Summary: A universal, CPU-portable abstract machine like this is what the JVM couldn’t be, what minified JavaScript was pushed towards but shouldn’t be, and what the C abstract machine unsuitably became.
 
 WebAssembly is an assembly dialect for an abstract computer, a bytecode format
 that runs on any device implementing a compatible runtime according to [the

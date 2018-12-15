@@ -1,6 +1,7 @@
 Title: Unix Parallelism and Concurrency: Processes & Signalling
 Date: 2018-02-12 22:30
 Tags: unix, python
+Summary: In case you thought this blog's design looked prehistoric enough, it's starting with a post about following concurrency patterns rooted in the era in which the mouse was a keen invention.
 
 In this era of threads and asynchronous abstractions, applications and processes
 have become almost synonymous. A process is widely seen as the operating
@@ -8,9 +9,9 @@ system's underlying representation of a whole running application. However, by
 limiting ourselves to this model we cut outselves off from an elegant set of
 tools for parallelism and concurrency.
 
-In case you thought this blog's design looked prehistoric enough, it's being
-started with a post about following concurrency patterns rooted in the era in
-which the mouse was a keen invention.
+In case you thought this blog's design looked prehistoric enough, it's starting
+with a post about following concurrency patterns rooted in the era in which the
+mouse was a keen invention.
 
 ***
 

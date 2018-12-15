@@ -1,6 +1,7 @@
 Title: Escape-Bypassing Language Injection: Exploiting Multiple-Level Language Embedding
 Date: 2018-03-03 20:14
 Tags: appsec, escaping, web, plt
+Summary: Remember that language escaping mechanisms only traverse a single level of embedding.
 
 When a fix for a well-known vulnerable programming practice becomes widely
 known, it runs the risk of being applied blindly without context, defeating its
@@ -44,7 +45,8 @@ holes. For example, we might escape HTML in a server-side template within an
 inline script tag, but not realise that escaping HTML only protects the HTML,
 not languages nested inside of it like JavaScript.
 
-_Escaping mechanisms only traverse a single level of language embedding._
+_Remember that language escaping mechanisms only traverse a single level of
+embedding._
 
 In that example we have the server-side templating language, the HTML, and the
 inline JavaScript. That means escaping must be done twice to traverse from the

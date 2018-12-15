@@ -1,6 +1,8 @@
 Title: Syntax Highlighting and Remote Code Execution: Why Developers are an Easy Target
 Date: 2018-08-25 09:12
 Tags: security, development environments, editors, ides
+Summary: My only defense against someone compromising my machine via a text editor plugin is VimScript being so horrible that even the most dedicated adversary would throw their laptop out of the window before completing a successful exploit.
+
 
 We chastise our relatives for installing unheard-of apps onto their phones, yet
 we execute thousands upon thousands of lines of untrusted code on our laptops

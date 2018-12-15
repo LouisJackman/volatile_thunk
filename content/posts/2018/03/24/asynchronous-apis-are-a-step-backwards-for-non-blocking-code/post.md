@@ -1,6 +1,7 @@
 Title: Asynchronous APIs are a Step Backwards for Non-Blocking Code
 Date: 2018-03-22 20:14
 Tags: concurrency, plt
+Summary: We don't hesitate to reach for a garbage collector when developing high-level applications, so why is the industry so keen on manually managing non-blocking IO?
 
 `async` and `await` are must-have features of modern programming languages, yet
 they represent the industry's doubling-down on a clumsy, error-prone, and

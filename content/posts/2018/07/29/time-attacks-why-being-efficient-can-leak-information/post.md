@@ -1,6 +1,7 @@
 Title: Timing Attacks: Why being Efficient can Leak Information
 Date: 2018-07-29 08:20
 Tags: security, appsec, timing attacks
+Summary: Writing secure code sometimes involves working against the fundamentals that programmers are taught from an early stage.
 
 Writing secure programs is often just about learning how to avoid pitfalls and common mistakes. However, it sometimes
 involves working against the fundamentals that programmers are taught from an early stage. For example, writing the

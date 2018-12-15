@@ -1,6 +1,7 @@
 Title: Your CI Pipeline has the Skeleton Key to your Infrastructure
 Date: 2018-11-25 20:33
 Tags: infrastructure, devops, cloud, security, sysadmin
+Summary: Don't harden your services only to leave the front door open to the tool with the key under the mat for the whole underling infrastructure.
 
 Continuous integration is a must-have for technology companies these days.
 Developers expect to be able to push code via git and have the resulting code
