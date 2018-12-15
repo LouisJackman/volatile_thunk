@@ -1,3 +1,6 @@
 [submodule "plugins/github.com/whiskyechobravo/pelican-open_graph"]
 	path = plugins/github.com/whiskyechobravo/pelican-open_graph
 	url = https://github.com/whiskyechobravo/pelican-open_graph
+[submodule "plugins/github.com/LouisJackman/pelican_summary_suffix_replacer"]
+	path = plugins/github.com/LouisJackman/pelican_summary_suffix_replacer
+	url = https://github.com/LouisJackman/pelican_summary_suffix_replacer
