@@ -10,9 +10,9 @@
 }
 
 body {
-    --secondary-text-color: #444;
-    --tertiary-text-colour: #555;
-    color: #333;
+    --primary-text-color: #222;
+    --secondary-text-color: #555;
+    color: var(--primary-text-color);
     background-color: #d0c9c0;
     font-family: 'LibreBaskerville-Regular', serif;
     font-size: medium;
@@ -54,8 +54,8 @@ h5 {
 }
 
 hr {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .clearfix {
@@ -63,7 +63,7 @@ hr {
 }
 
 h2.entry-title {
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     font-size: larger;
 }
 
@@ -87,7 +87,7 @@ body dl dt {
 }
 
 #post-list > li:not(:last-child) {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 p.info {
@@ -105,24 +105,30 @@ header h2 {
 }
 
 header h1 a strong {
-    color: var(--tertiary-text-colour);
+    color: var(--secondary-text-color);
     padding-top: 2px;
     display: block;
     font-size: 12px;
 }
 
 footer.post-info {
+    position: relative;
     text-align: left;
+    clear: both;
 }
 
 .post-info time.published {
-    font-size: smaller;
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     font-weight: bold;
 }
 
+.entry-summary {
+    color: var(--secondary-text-color);
+}
+
+.entry-summary,
 .entry-content {
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 strong.back-to-the-top {
@@ -268,39 +274,3 @@ a.back-to-the-top {
     text-decoration: none;
 }
 
-@media (min-width: 600px) {
-
-
-    nav li {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    nav.landing-page {
-        margin: 40px;
-    }
-
-    .landing-page li {
-        display: block;
-        position: relative;
-    }
-
-    .landing-page li h3 {
-        float: left;
-        text-align: right;
-        width: 12ex;
-    }
-
-    .landing-page li section {
-        float: right;
-        max-width: 40ex;
-    }
-
-    .back-to-the-top {
-        border-radius: 5px;
-        font-size: 40px;
-        height: 50px;
-        right: 20px;
-        width: 50px;
-    }
-}

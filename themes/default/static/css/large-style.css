@@ -1,0 +1,33 @@
+nav li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+nav.landing-page {
+    margin: 40px;
+}
+
+.landing-page li {
+    display: block;
+    position: relative;
+}
+
+.landing-page li h3 {
+    float: left;
+    text-align: right;
+    width: 12ex;
+}
+
+.landing-page li section {
+    float: right;
+    max-width: 40ex;
+}
+
+.back-to-the-top {
+    border-radius: 5px;
+    font-size: 40px;
+    height: 50px;
+    right: 20px;
+    width: 50px;
+}
+
