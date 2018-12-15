@@ -11,19 +11,12 @@
                         <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
                     </h2>
                 </header>
+                <!-- /.post-info -->
+                <div class="entry-summary"> {{ article.summary }} </div>
+                <!-- /.entry-content -->
                 <footer class="post-info">
                     <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
                 </footer>
-                <!-- /.post-info -->
-                <div class="entry-content"> {{ article.summary }} </div>
-                <!-- /.entry-content -->
-                <ul class="tags">
-                    {% for tag in article.tags %}
-                    <li class="tag">
-                        <a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
             </article>
         </li>
         {% endfor %}
