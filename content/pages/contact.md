@@ -8,4 +8,5 @@ I can be contacted via the following channels:
 * [GitHub](https://github.com/LouisJackman)
 * [StackExchange](https://stackoverflow.com/users/1816025/ljackman)
 * [Keybase](https://keybase.io/LouisJackman)
+* [Hacker News](https://news.ycombinator.com/user?id=ljackman)
 
