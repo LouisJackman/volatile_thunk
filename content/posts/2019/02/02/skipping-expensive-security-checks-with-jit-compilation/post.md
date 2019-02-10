@@ -1,7 +1,7 @@
-Title: To Secure Systems of the Future, We must Rethink our Notions of "Environment" and "Operating System"
+Title: Skipping Expensive Security Checks with JIT Compilation
 Date: 2019-02-02 17:17
-Tags: plt, appsec, security
-Summary: The blurred distinction between environments and the layers in operating systems has made security responsibilities unclear, leading to performance regressions from duplicated checks, and leaving areas unprotected.
+Tags: plt, appsec, security, webassembly
+Summary: Can performance be improved by deduplicating security checks across technical layers, or are they all neccessary for maintaining "security-in-layers"?
 
 For all of the proclamations about using C for "performance reasons", its lack
 of safety has inflicted performance penalties on contemporary systems that must
@@ -11,12 +11,14 @@ Blaming C for this is unfair though. The real culprit is machine code
 still being the primary delivery format format for executables on mainstream
 operating systems. They might alter some addresses and put their own executable
 format header on top, but even with all of the OS-specific executable format
-additions, the majority of the executable code is still machine code provided
-directly to the CPU.
+additions, a significant amount of distributed executable code is still machine
+code provided directly to the CPU.
 
 The delivery format therefore assumes the lowest common denominator of modern
-computing: the Von Newman architecture with plenty of CPU architecture
-edgecases, such as the massive complexity and legacy of the x86 instruction set.
+computing: the [Von Neumann
+architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) with
+plenty of CPU architecture edgecases, such as the massive complexity and legacy
+of the x86 instruction set.
 
 # The Problem with Machine Code as a Distributed Application Artefact
 
@@ -56,7 +58,9 @@ system.
 
 This isn't a free lunch though. Most of these mitigations incur runtime
 performance costs. Even more costs pile up if such mitigations are revealed to
-[not actually work]() and then need to be implemented again in higher levels.
+[not actually
+work](https://en.wikipedia.org/wiki/Meltdown_(security_vulnerability)) and then
+need to be implemented again in higher levels.
 
 All of this poses a question: why should other languages pay these performance
 costs due to the failings of C and other languages lacking memory safety? If,
@@ -132,16 +136,16 @@ environment must compensate with runtime checks or risk compromise.
 
 This is why designers of environments like language VMs or OSes must be careful
 about relaxing constraints on the "apps" or "languages" running on top. Some
-platform's like Apple's iOS has done respectable jobs of this.
+platform's like Apple's iOS have done respectable jobs of this.
 
----
+# An Alternative
 
-How would this system even work? The compilers and interpreters would need to be
-fixed and trusted; allowing arbitrary ones would allow compiling or interpreting
-languages lacking memory safety, circumventing the protection. There would also
-need to be environment primitives that can be written without such guarentees,
-to allow bootstrapping the environment and providing the low-level building
-blocks.
+How would a system that solves this work? The compilers and interpreters would
+need to be fixed and trusted; allowing arbitrary ones would allow compiling or
+interpreting languages lacking memory safety, circumventing the protection.
+There would also need to be environment primitives that can be written without
+such guarentees, to allow bootstrapping the environment and providing the
+low-level building blocks.
 
 The user would download an "app", a bundle of language source files, and execute
 it. The OS would then detect that it is a new "app" and compile it to machine
@@ -168,106 +172,13 @@ no others.
 
 ---
 
-Wait, have we just basically described a web browser executing WebAssembly,
-the browser being implemented on the "bare metal" and bypassing existing OS
-and CPU protections directly? I'm not the first one to realise this; Gary B**
-made a "haha, only serious" comment about this regarding JavaScript in his
-excellent "JavaScript takes over the World" talk [many years ago]().
+We just basically described a web browser executing WebAssembly, but with the
+hypothetical modification in that the browser is now implemented on the "bare
+metal" and bypassing existing OS and CPU protections directly. Gary Bernhardt
+made a "haha, only serious" contribution to this topic regarding JavaScript in
+his excellent "The Birth and Death of JavaScript" talk [many years
+ago](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript).
 
-# How Existing Notions of "Environment" and "Operating System" have Blurred Security Responsibilities
-
-The overlap between language and OS security layers is an inevitable conflict
-given that language runtimes and compilers seem to have constructs that are
-suspiciously similar to various OS features. On one end of the scale you
-superficial similarities like Rust's borrow checker trying to implement OS'
-memory safety but statically at compile time rather than at runtime; on the
-other end you have Erlang/OTP and Emacs which are effectively creating
-whole new operating systems bar the hardware abstraction layer.
-
-Sadly, a lot of these systems are not designed to be operating systems but are
-treated as such by their users. Emacs is supposed to be a text editor but often
-becomes the environment in which its users live, but it's poorly suited for that
-role as its text editor origins means it doesn't contain even basic security
-features that people expect of modern OSes like process isolation. A syntax
-highlighting package can start intercepting password entry functions in
-SSH-utilising packages like TRAMP.
-
-Perhaps the computing industry as a whole needs to look at this overlap and have
-an honest discussion about what layers should be providing security features
-like isolation, and which ones are solely for evaluating already-trusted inputs.
-
-It seems environments, operating systems, and language runtimes have intertangled
-definitions and unclear responsibilities. I envisage a more clearly defined
-layer as follows:-
-
-## The Hardware
-
-This one is self-explanatory. It's what realises our abstract programs, what
-physically gets things done.
-
-## The Hardware Abstraction Layer
-
-Completely Subsuming hardware abstraction layers into the definition of
-an operating system is unhelpful. An OS providers a HAL but also often provide
-unrelated features like GUI toolkits; compacting these layers into one entity
-doesn't help discussion of security responsibilities.
-
-## The Environment
-
-Rather than just calling this the "OS", let's clearly distinguish it from the
-HAL. It's the set of building blocks of the environment in which the user will
-work even if it's mostly hidden behind UIs. It's the filesystems, the process
-management, the local user account management, the ACLs, and more. A Lisp
-machine and a Linux box will have a very different set of abstractions, but they
-serve the same purpose: a hardware-agnostic set of abstractions for a
-computation environment.
-
-This environment needs to provide clear, robust, and comprehensive security
-mechanisms. User accounts should be isolated, the datastore of choice (primarily
-the hierarchal filesystem on popular environments today) should have access
-controls, and processes need to be isolatable. It can ask the HAL to use
-the underlying hardware to provide a second layer of enforcement of these
-constraints but it shouldn't _completely_ delgate to it.
-
-If it is sufficiently confident in its security layers, it is possible to
-disable the secondary runtime checks in the underlying platforms to gain a
-performance boost at the expense of security-by-layers. Contrary to what many
-security engineers claim, tradeoffs like this can be a perfectly reasonable.
-Security engineering isn't about acheiving absolute security but is instead an
-economic tradeoff between security the other aspects of a system.
-
-Again, why should an environment pay twice for a security constraint it is
-already sure it implements properly?
-
-A bonus point about making a clear distinction by splitting the definition of an
-operating system into the HAL and the environment is the clarification that
-that such environments don't necessarily need a HAL as they can nest within
-other environments, but that _the security mechanisms must still be enforced_.
-As mentioned previously, Emacs and other similar current environments fail at
-this.
-
-## The User Interface
-
-There isn't much to say about this except that the UI should not implement
-security constraints but delegate to the environment, and should take care to
-visualise and present these constraints in a way that is useful to the expected
-user of the platform.
-
-Provide security controls in a way that is easily digestable to the average user
-is a topic out of scope for this post; needless to say, Linux is a prime
-example of how _not_ to do this. iOS and Qubes OS are better examples.
-
-# Rethinking Environment Layers and their Security Responsibilities
-
-Rethinking the layers that make up an OS lays bare the ambiguities about which
-layers should be handling what, and whether layers should be duplicating runtime
-security checks from layers underneath.
-
-Is the performance cost worth the benefits of security-in-layers, or is it an
-unnecessary performance hit caused by environments not implementing security in
-a sufficiently clear and robust way that they are willing to depend solely on it
-and not delegate to lower levels?
-
-Don't look at me, I have no idea. I've only just managed to formulate the
-question, let alone one of the many right answers.
-
+The inevitable performance vs security-in-layers tradeoff this conversation
+brings up will be discussed more in my [next
+article](http://localhost:8000/articles/2019/02/10/to-secure-systems-of-the-future-we-must-rethink-our-notions-of-environment-and-operating-system/index.html).
