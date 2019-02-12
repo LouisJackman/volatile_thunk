@@ -181,4 +181,4 @@ ago](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
 
 The inevitable performance vs security-in-layers tradeoff this conversation
 brings up will be discussed more in my [next
-article](http://localhost:8000/articles/2019/02/10/to-secure-systems-of-the-future-we-must-rethink-our-notions-of-environment-and-operating-system/index.html).
+article](/articles/2019/02/10/to-secure-systems-of-the-future-we-must-rethink-our-notions-of-environment-and-operating-system/index.html).
