@@ -72,8 +72,10 @@ endif
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-s3_upload: publish
+just_s3_upload: publish
 	aws s3 sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl public-read --delete
+
+s3_upload: publish just_s3_upload
 
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload
