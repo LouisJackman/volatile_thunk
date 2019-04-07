@@ -28,14 +28,12 @@ SUMMARY_HTML_SUFFIX = '<span class="summary-suffix">[…]</span>'
 INDEX_SAVE_AS = 'articles.html'
 
 PLUGIN_PATHS = [
-    'plugins/github.com/LouisJackman/pelican_summary_suffix_replacer',
     'plugins/github.com/whiskyechobravo/pelican-open_graph'
 ]
 
 PLUGINS = [
     'extended_sitemap',
     'open_graph',
-    'summary_suffix_replacer'
 ]
 
 # Feed generation is usually not desired when developing
