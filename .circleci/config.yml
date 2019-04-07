@@ -1,0 +1,50 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7
+
+    steps:
+      - checkout
+
+      - restore_cache
+          keys:
+            - project-cache
+
+      - run:
+          name: Install Dependencies
+          command: |
+            unset AWS_ACCESS_KEY_ID
+            unset AWS_SECRET_ACCESS_KEY
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+
+      - save_cache:
+          key: project-cache
+          paths:
+            - ./venv
+
+      - run:
+          name: Check Types
+          command: |
+            unset AWS_ACCESS_KEY_ID
+            unset AWS_SECRET_ACCESS_KEY
+            . venv/bin/activate
+            mypy compose.py publish.py
+
+      - run:
+          name: Publish Locally
+          command: |
+            unset AWS_ACCESS_KEY_ID
+            unset AWS_SECRET_ACCESS_KEY
+            . venv/bin/activate
+            make publish
+
+      - run:
+          name: Upload locally Published Results
+          command: |
+            . venv/bin/activate
+            make s3_upload
+
