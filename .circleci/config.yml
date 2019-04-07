@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache
+      - restore_cache:
           keys:
             - project-cache
 
