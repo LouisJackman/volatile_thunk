@@ -9,6 +9,10 @@
     border: none;
 }
 
+html {
+      scroll-behavior: smooth;
+}
+
 body {
     --primary-text-color: #222;
     --secondary-text-color: #555;
