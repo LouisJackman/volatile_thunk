@@ -71,6 +71,7 @@ SITEMAP = {
 
 STATIC_PATHS = [
     '.well-known/keybase.txt',
+    '.well-known/security.txt',
     'cv',
     'images',
     'robots.txt',
