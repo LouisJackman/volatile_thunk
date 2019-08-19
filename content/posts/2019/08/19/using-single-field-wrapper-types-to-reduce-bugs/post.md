@@ -3,43 +3,21 @@ Date: 2019-08-19 17:43
 Tags: plt, java, types
 Summary: Structuring and grouping data with types is only part of the correctness guarantees that type checking offers; "newtypes", sometimes known as "wrapper types" in Domain-Driven Development circles, is another important component.
 
+Structuring and grouping data with types is only part of the correctness
+guarantees that type checking offers; "newtypes", sometimes known as "wrapper
+types" in Domain-Driven Development circles, is another important component.
+
 Type checking is increasingly becoming the norm in software development.
 Across many companies, JavaScript projects are being migrated to TypeScript, and
 Objective-C to Swift. Even a bulwark of dynamic typing, Python, has ceded to the
 importance of type checking in codebases once they surpass a certain size,
 adding type checking in 3.5.
 
-Before discussing single-field wrapper types, let's recap basic typing. It
-involves annotating code with the expected types in a function for the
-primitives: numbers, strings, booleans, arrays, and maps. Developers new to type
-checking often stop here, not reaching one of its biggest advantages:
-structuring data with composite types. Sticking mostly to primitive types is
-branded by many developers as "stringly-typing".
-
-Rather than passing user information as a `Map<String, Object>` if we use Java’s
-notation, a new type can be defined that lays out the expected structure:
-
-	:::java
-	class UserInformation {
-		public String firstName;
-		public String lastName;
-		public short ageInYears;
-		public boolean isActivated;
-
-		public UserInformation(String firstName, String lastName, short ageInYears, boolean isActivated) {
-			this.firstName = firstName;
-			this.lastName = lastName;
-			this.ageInYears = ageInYears;
-			this.isActivated = isActivated;
-		}
-	}
-
-Why do the extra work of defining the type? Well, a `Map` can store any key,
-meaning typos like `firstname` over `firstName` are not caught at compile-time,
-instead failing for users with a runtime error. The values are often typed to a
-common supertype to allow covering different types of value, such as Java and
-.NET’s `Object`. Runtime downcasting is required to pull more specific types out
-of those slots, moving more error checking from compile-time to runtime.
+Before discussing single-field wrapper types, let's recap basic type annotations
+for those more comfortable with languages without them. It involves annotating
+code with the expected types for values such as parameters. Such types
+include numbers, strings, booleans, arrays, maps, and custom composite groupings
+of other types.
 
 ---
 
@@ -60,8 +38,8 @@ They might wonder about the point of this; an email address is a string, so why
 not use that directly rather than wrapping it in a type that bundles no other
 fields with it?
 
-Static typing communities outside of the mainstream, such as Haskell, have
-embraced this pattern with features like `newtype`:
+Static typing communities such as Haskell's and Go's have embraced this pattern
+with features like `newtype`:
 
 	:::haskell
 	newtype Email = Email String
@@ -87,12 +65,10 @@ framework to provide values from a HTTP request:
 	addUser(userName, email);
 
 	// Alternatively, using the "wrapper-type" style instead:
-	addUser(new Email(userName), new UserName(email));
+	addUser(new UserName(userName), new Email(email));
 
 Both of those calls have a bug in that they accidentally swap the parameters,
-but it’s more obvious to both writers and readers in the second example. It
-seems highly unlikely that someone could write the latter and not immediately
-recognise the error, whereas making a mistake like the former is all too easy.
+but only the second one blocks it at compile time.
 
 ---
 
