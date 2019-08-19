@@ -1,6 +1,5 @@
 AUTHOR = 'Louis Jackman'
 SITENAME = 'Volatile Thunk'
-SITESUBTITLE = "Louis Jackman's Website"
 SITEURL = 'https://volatilethunk.com'
 ARTICLE_URL = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 ARTICLE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'

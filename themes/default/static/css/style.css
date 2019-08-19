@@ -53,7 +53,7 @@ header h1 {
 
 h1 {
     margin-top: 33px;
-    margin-bottom: 27px;
+    margin-bottom: 20px;
     font-size: 17px;
 }
 
@@ -74,12 +74,12 @@ nav h3 {
     font-size: 1.17em;
 }
 
-article header h2 {
-    margin-bottom: 20px;
-}
-
 .entry-summary {
     margin-bottom: 5px;
+}
+
+article header h2 {
+    margin-bottom: 20px;
 }
 
 .entry-title {
