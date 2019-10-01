@@ -319,6 +319,39 @@ a.back-to-the-top {
     text-decoration: none;
 }
 
+table {
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 15px;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+td {
+    border-left: 1px solid black;
+}
+
+td:first-child {
+    text-align: right;
+}
+
+td:last-child {
+    border-right: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #e0d9d0;
+}
+
+tr:last-child {
+    border-bottom: 1px solid black;
+}
+
 @media (orientation: landscape) and (max-device-width: 599px) {
     p {
         font-size: 8px;
