@@ -17,7 +17,7 @@ body {
     --primary-text-color: #222;
     --secondary-text-color: #555;
     color: var(--primary-text-color);
-    background-color: #d0c9c0;
+    background-color: #e0e0e0;
     font-family: 'LibreBaskerville-Regular', serif;
     font-size: medium;
     padding: 15px;
