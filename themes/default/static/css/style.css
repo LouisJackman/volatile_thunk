@@ -345,7 +345,8 @@ td:last-child {
 }
 
 tr:nth-child(even) {
-    background-color: #e0d9d0;
+    background-color: #e0e0e0;
+    background-color: #d0d0d0;
 }
 
 tr:last-child {
