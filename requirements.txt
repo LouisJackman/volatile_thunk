@@ -1,4 +1,4 @@
-awscli==1.16.143
+awscli==1.16.252
 beautifulsoup4==4.6.3
 markdown==2.6.11
 mypy==0.641
