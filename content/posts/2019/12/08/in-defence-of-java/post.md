@@ -115,12 +115,13 @@ simplicity, but then prescribe a very opinionated view of said simplicity as the
 One True Simplicity that other ecosystems simply haven't yet become enlightened
 to.
 
-This is a curious trend. For example, Go's designers reject algebraic data types
-in order to keep the language simple, yet allow `nil`s everywhere, complicating
-code as it can no longer assume an interface or pointer value contain a
-usable interface value or a pointer to a valid value.
+For example, Go's designers reject algebraic data types in order to keep the
+language simple, making a nil-avoiding `Option` type unfeasible, yet allows
+`nil`s to be assigned to many types of variable. This is done in the name of
+simplicity, yet it complicates code that can no longer assume an interface or
+pointer value contain a usable interface value or a pointer to a valid value.
 
-Another curiosity includes its dragging of its feet on supporting generics but
+Another tradeoff includes its dragging of its feet on supporting generics but
 then rolling out its own synchronised map type, `sync.Map`, requiring runtime
 type casting to put values in and pull values out. This contradicts one of the
 original design rationales of Go, that static typing ultimately makes reasoning
@@ -299,9 +300,9 @@ unrelated features.
 
 Java is class-based, so its original '90s inception is guilty of the
 aforementioned problem of tying polymorphism, encapsulation, and code reuse
-together. Its newer features are quite orthogonal though, and it deserves credit
-for creating new features with greater orthogonality than many of its
-contemporaries.
+together into a single mechanism. Its newer features are quite orthogonal
+though, and it deserves credit for creating new features with greater
+orthogonality than many of its contemporaries.
 
 Many languages could map and filter sequences long before Java, such as
 JavaScript and Ruby, but their versions were not orthogonal: they were tied to
@@ -354,19 +355,21 @@ living along side the old version. This is likely how C# ended up with three
 overlapping ways of passing code around by value: delegates, anonymous
 delegates, and lambdas.
 
-Academics have a penchant for proposing computer science concepts that don't
-really work in the real world because they likely haven't worked in the industry
-for decades and thus fail to understand the constraints of real-world problems.
-Despite that, they have also proposed features that received backlash from
-developers at the time despite eventually causing seismic shifts in software
-development, e.g. structured programming, garbage collection, and the
-discouraging of global variables.
+New features will usually be a tradeoff between academic concerns and just
+"getting it done" so developers can start using it sooner. Pressure on
+programming language designers is arguably trading off too much of the former
+for the latter.
 
 Language design for a mainstream language must respect the academic theory work
 but also be tempered by real world experience. Prescribing feature from academic
 ivory towers without real world studies creates flaws, as does designing by
-committee or based on how many developers "thumbed up" an issue on a
-language's issue tracker.
+committee or adding features haphazardly based on how many developers "thumbed
+up" an issue on a language's issue tracker.
+
+Giving up this balance to appease a vocal minority of developers risks creating
+an echo chamber ecosystem while the silent majority of its developers become
+increasingly confused at its endless new features. Java has thankfully managed
+to avoid this.
 
 # Hosted Languages and Standalone Languages
 
@@ -482,9 +485,10 @@ modified by callees through dynamic stack-walking.)
 
 As software development adopts churn from fad-driven cycles, it loses sight of
 foundational CS ideas that allows certain technologies to stand the test of time
-while others need to be rewritten after just a few years of inception. Unix, the web, and the JVM have survived decades and will likely survive
-more albeit with some tweaks. Most technologies come and fade away just enough
-to make an apperance on various technology enthusiast news aggregators but not
+while others need to be rewritten after just a few years of inception. Unix, the
+web, and the JVM have survived decades and will likely survive more albeit
+with some tweaks. Most technologies come and fade away just enough to make
+an apperance on various technology enthusiast news aggregators but not
 enough to make a dent in the grand scheme of things.
 
 Accruing features at a rapid pace can mask shaky foundations. The illusion of
@@ -516,12 +520,14 @@ subset of ES5 that Douglas Crockford termed the "Good Parts".
 
 # Why Java Will, and Should, Continue to Thrive for Years to Come
 
-Sandboxing didn't really work and the lack of value types was a mistake. Put
-those aside, and the JVM is a technology that has really stood the test of time.
-The stack-based VM with portable bytecode worked well, and the solidification of
-the memory model in the face of concurrency in Java 5 gave it a permanent
-advantage over runtimes that pretended fine-grained task-based parallelism
-didn't exist, like MRI Ruby, CPython, and Node.js.
+Sandboxing didn't really work, ubiquitous reflection and the ability to
+dynamically revert accessibility and finality modifiers on fields was a mistake,
+and the lack of value types was a thorn in the runtime's. Put those aside, and
+the JVM is a technology that has really stood the test of time. The stack-based
+VM with portable bytecode worked well, and the solidification of the memory
+model in the face of concurrency in Java 5 gave it a permanent advantage over
+runtimes that pretended fine-grained task-based parallelism didn't exist, like
+MRI Ruby, CPython, and Node.js.
 
 Its type system weathered criticism for verbosity in the Noughties and came out
 of the other end as _developers' preferred approach_, albeit with more type
