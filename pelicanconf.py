@@ -22,7 +22,19 @@ TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
 
-SUMMARY_HTML_SUFFIX = '<span class="summary-suffix">[…]</span>'
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.toc': {
+            'title': 'Table of contents:' 
+        },
+        'markdown.extensions.codehilite': {
+            'css_class': 'highlight'
+            },
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
 
 INDEX_SAVE_AS = 'articles.html'
 
