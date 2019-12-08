@@ -1,7 +1,7 @@
 Title: In Defence of Java
 Date: 2019-12-08 21:34
 Tags: languages, plt, java
-Summary: Is Java a stagnant, stale programming language, sustained only by its flagship position on one of the more popular language runtimes? It's increasingly believed by many software engineers, yet I'm unconvinced.
+Summary: Is Java a stagnant, stale programming language, sustained only by its flagship position on one of the more popular language runtimes? It's an increasingly-held position, yet I'm unconvinced. Here's why.
 
 Is Java a stagnant, stale programming language, sustained only by its flagship
 position on one of the more popular language runtimes? It's increasingly
@@ -169,7 +169,7 @@ way of solving the same problem:
 
     List<Person> activePre8 = new ArrayList<>();
     for (Person person : people) {
-        if (person.isActive) {
+        if (person.isActive()) {
             active.add(person);
         }
     }
@@ -522,12 +522,12 @@ subset of ES5 that Douglas Crockford termed the "Good Parts".
 
 Sandboxing didn't really work, ubiquitous reflection and the ability to
 dynamically revert accessibility and finality modifiers on fields was a mistake,
-and the lack of value types was a thorn in the runtime's. Put those aside, and
-the JVM is a technology that has really stood the test of time. The stack-based
-VM with portable bytecode worked well, and the solidification of the memory
-model in the face of concurrency in Java 5 gave it a permanent advantage over
-runtimes that pretended fine-grained task-based parallelism didn't exist, like
-MRI Ruby, CPython, and Node.js.
+and the lack of value types was a thorn in the runtime's side. Put those aside,
+and the JVM is a technology that has really stood the test of time. The
+stack-based VM with portable bytecode worked well, and the solidification of the
+memory model in the face of concurrency in Java 5 gave it a permanent advantage
+over runtimes that pretended fine-grained task-based parallelism didn't exist,
+like MRI Ruby, CPython, and Node.js.
 
 Its type system weathered criticism for verbosity in the Noughties and came out
 of the other end as _developers' preferred approach_, albeit with more type
