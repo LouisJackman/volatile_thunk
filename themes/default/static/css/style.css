@@ -1,8 +1,3 @@
-@font-face  {
-    font-family: 'LibreBaskerville-Regular';
-    src: url(../fonts/LibreBaskerville-Regular.ttf);
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -14,16 +9,40 @@ html {
 }
 
 body {
-    --primary-text-color: #222;
-    --secondary-text-color: #555;
-    color: var(--primary-text-color);
-    background-color: #e0e0e0;
-    font-family: 'LibreBaskerville-Regular', serif;
+    --background-color: rgb(255, 255, 255);
+    --text-color: rgb(27, 27, 27);
+
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    font-family:
+        /* Safari for OS X and iOS (San Francisco) */
+        -apple-system,
+        /* Chrome < 56 for OS X (San Francisco) */
+        BlinkMacSystemFont,
+        /* Windows */
+        "Segoe UI",
+        /* Android */
+        "Roboto",
+        /* Basic web fallback */
+        "Helvetica Neue", Arial, sans-serif,
+        /* Emoji fonts */
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        /* Fallback */
+        sans-serif;
+
     font-size: medium;
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
     max-width: 670px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: rgb(18, 18, 18);
+        --text-color: rgb(160, 160, 160);
+    }
 }
 
 h1 a {
@@ -54,24 +73,24 @@ header h1 {
 h1 {
     margin-top: 33px;
     margin-bottom: 20px;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 h2 {
     margin-top: 30px;
     margin-bottom: 25px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 h3 {
     margin-top: 27px;
     margin-bottom: 23px;
-    font-size: 13px;
+    font-size: 17px;
 }
 
 nav h3 {
     margin-top: 0;
-    font-size: 1.17em;
+    font-size: 1.19em;
 }
 
 .entry-summary {
@@ -96,7 +115,7 @@ article header h2 {
 
 .toctitle {
     display: block;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 33px;
 }
@@ -123,7 +142,7 @@ hr {
 }
 
 h2.entry-title {
-    color: var(--primary-text-color);
+    color: var(--text-color);
     font-size: larger;
 }
 
@@ -137,7 +156,7 @@ ul,
 body dl dt {
     line-height: 30px;
     letter-spacing: .5px;
-    font-size: 15px;
+    font-size: 21px;
     font-weight: lighter;
 }
 
@@ -165,10 +184,10 @@ header h2 {
 }
 
 header h1 a strong {
-    color: var(--secondary-text-color);
+    color: var(--text-color);
     padding-top: 2px;
     display: block;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 footer.post-info {
@@ -178,12 +197,12 @@ footer.post-info {
 }
 
 .post-info time.published {
-    color: var(--primary-text-color);
+    color: var(--text-color);
     font-weight: bold;
 }
 
 .entry-summary {
-    color: var(--secondary-text-color);
+    color: var(--text-color);
 }
 
 .entry-summary,
@@ -198,11 +217,11 @@ strong.back-to-the-top {
 }
 
 blockquote {
-    color: var(--secondary-text-color);
+    color: var(--text-color);
     margin-left: 20px;
     margin-top: 15px;
     padding-left: 15px;
-    border-left: var(--secondary-text-color) solid 3px;
+    border-left: var(--text-color) solid 3px;
 }
 
 #content .paginator {
@@ -214,7 +233,7 @@ body > dl dd:not(:last-child) {
 }
 
 body > dl dd {
-    color: var(--secondary-text-color);
+    color: var(--text-color);
     font-weight: lighter;
 }
 
@@ -228,6 +247,10 @@ body > dl dt:not(:first-child) {
     padding: 20px;
 }
 
+code {
+    overflow: auto;
+}
+
 li {
     margin-top: 25px;
     margin-left: 30px;
@@ -235,14 +258,14 @@ li {
 
 .summary-suffix {
     font-weight: bold;
-    color: var(--secondary-text-color);
+    color: var(--text-color);
 }
 
 .tag {
     margin: 0;
     padding: 0;
     display: inline;
-    color: var(--secondary-text-color);
+    color: var(--text-color);
 }
 
 .tag:not(:first-child) {
@@ -269,7 +292,7 @@ body > li {
 }
 
 nav.landing-page {
-    max-width: 500px;
+    max-width: 530px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -313,10 +336,10 @@ nav.landing-page {
     animation: hide-back-to-top 1s;
     background-color: inherit;
     border-radius: 3px;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     bottom: 35px;
     display: block;
-    font-size: 28px;
+    font-size: 35px;
     height: 40px;
     opacity: 0;
     position: fixed;
@@ -370,7 +393,7 @@ tr:last-child {
 
 @media (orientation: landscape) and (max-device-width: 599px) {
     p {
-        font-size: 8px;
+        font-size: 13px;
         line-height: 16px;
     }
 }

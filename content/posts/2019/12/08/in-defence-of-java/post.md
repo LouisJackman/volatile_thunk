@@ -220,13 +220,13 @@ What about concise lambdas? Any so-called SAM type can use them, that is, types
 with a _Single Abstract Method_. That makes them amenable to implementing new
 features, as it works with a fundamental notion of the language. It scales up
 well beyond a particular use case; while it can supersede the enhanced for loop
-with the `java.util.Collection::forEach` method, it can also implement any other
-API that befits lambdas including synchronous iteration, asynchronous iteration,
-monadic composition, event handlers, countless functional patterns,
-Smalltalk-style "block consuming" APIs, and more. It leads to somewhat
-intractible amounts of computation, depending on whether Java decides to compile
-it as a vanilla anonymous inner class method call or a `invokedynamic`
-invocation, but still has constant-time performance characteristics.
+with the `Collection::forEach` method, it can also implement any other API that
+befits lambdas including synchronous iteration, asynchronous iteration, monadic
+composition, event handlers, countless functional patterns, Smalltalk-style
+"block consuming" APIs, and more. It leads to somewhat intractible amounts of
+computation, depending on whether Java decides to compile it as a vanilla
+anonymous inner class method call or a `invokedynamic` invocation, but still has
+constant-time performance characteristics.
 
 According to that definition of simplicity, lambdas are a _simpler_ feature than
 enhanced for loops, especially as they supersede enhanced for loops with

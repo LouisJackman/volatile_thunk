@@ -16,17 +16,18 @@ nav.landing-page {
 .landing-page li h3 {
     float: left;
     text-align: right;
-    width: 12ex;
+    width: 9ex;
+    font-weight: normal;
 }
 
 .landing-page li section {
     float: right;
-    max-width: 40ex;
+    max-width: 35ex;
 }
 
 .back-to-the-top {
     border-radius: 5px;
-    font-size: 40px;
+    font-size: 55px;
     height: 50px;
     right: 20px;
     width: 50px;
