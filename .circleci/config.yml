@@ -17,6 +17,7 @@ jobs:
       - run:
           name: Pull LFS Artefacts
           command: |
+            apt-get install --yes --no-install-recommends git-lfs
             git lfs fetch
 
       - restore_cache:
