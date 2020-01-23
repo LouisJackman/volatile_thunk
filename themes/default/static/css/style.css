@@ -60,6 +60,10 @@ nav li {
     margin-right: 3px;
 }
 
+nav li a {
+    font-size: 18px;
+}
+
 a {
     color: inherit;
 }
@@ -156,8 +160,17 @@ ul,
 body dl dt {
     line-height: 30px;
     letter-spacing: .5px;
-    font-size: 21px;
     font-weight: lighter;
+}
+
+p,
+ul,
+body dl dt {
+    font-size: 20px;
+}
+
+.post-info time.published {
+    font-size: 15px;
 }
 
 #post-list > li {
