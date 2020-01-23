@@ -39,7 +39,7 @@ help:
 	@echo '                                                                          '
 
 stylise_code:
-	pygmentize -S igor -f html -a .highlight >themes/default/static/css/pygment.css
+	pygmentize -S solarized-dark -f html -a .highlight >themes/default/static/css/pygment.css
 
 html: stylise_code
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
