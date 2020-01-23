@@ -1,3 +1,5 @@
+from typing import Optional
+
 AUTHOR = "Louis Jackman"
 SITENAME = "Volatile Thunk"
 SITEURL = "https://volatilethunk.com"
@@ -42,8 +44,8 @@ PLUGINS = [
 ]
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_ALL_ATOM: Optional[str] = None
+CATEGORY_FEED_ATOM: Optional[str] = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
