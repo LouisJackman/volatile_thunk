@@ -1,50 +1,44 @@
-AUTHOR = 'Louis Jackman'
-SITENAME = 'Volatile Thunk'
-SITEURL = 'https://volatilethunk.com'
-ARTICLE_URL = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
-ARTICLE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+AUTHOR = "Louis Jackman"
+SITENAME = "Volatile Thunk"
+SITEURL = "https://volatilethunk.com"
+ARTICLE_URL = "articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
+ARTICLE_SAVE_AS = "articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
 
 SITE_DESCRIPTION = "Louis Jackman's website about information security, software development, and system administration."
 
 SITE_KEYWORDS = [
-    'Louis Jackman',
-    'blog',
-    'articles',
-    'infosec',
-    'backend development',
-    'sysadmin',
-    'system administration'
+    "Louis Jackman",
+    "blog",
+    "articles",
+    "infosec",
+    "backend development",
+    "sysadmin",
+    "system administration",
 ]
 
-PATH = 'content'
+PATH = "content"
 
-TIMEZONE = 'Europe/London'
+TIMEZONE = "Europe/London"
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = "en"
 
 MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.toc': {
-            'title': 'Table of contents:' 
-        },
-        'markdown.extensions.codehilite': {
-            'css_class': 'highlight'
-            },
-        'markdown.extensions.extra': {},
-        'markdown.extensions.meta': {},
+    "extension_configs": {
+        "markdown.extensions.toc": {"title": "Table of contents:"},
+        "markdown.extensions.codehilite": {"css_class": "highlight"},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
     },
-    'output_format': 'html5',
+    "output_format": "html5",
 }
 
-INDEX_SAVE_AS = 'articles.html'
+INDEX_SAVE_AS = "articles.html"
 
-PLUGIN_PATHS = [
-    'plugins/github.com/whiskyechobravo/pelican-open_graph'
-]
+PLUGIN_PATHS = ["plugins/github.com/whiskyechobravo/pelican-open_graph"]
 
 PLUGINS = [
-    'extended_sitemap',
-    'open_graph',
+    "extended_sitemap",
+    "open_graph",
 ]
 
 # Feed generation is usually not desired when developing
@@ -60,49 +54,39 @@ SUMMARY_MAX_LENGTH = 125
 RELATIVE_URLS = True
 
 MENUITEMS = [
-    ('Articles', '/articles.html'),
-    ('About', '/pages/about.html'),
-    ('Projects', 'https://github.com/LouisJackman'),
-    ('Contact', '/pages/contact.html')
+    ("Articles", "/articles.html"),
+    ("About", "/pages/about.html"),
+    ("Projects", "https://github.com/LouisJackman"),
+    ("Contact", "/pages/contact.html"),
 ]
 
 SITEMAP = {
-    'format': 'xml',
-    'priorities': {
-        'articles': 1,
-        'indexes': 0.5,
-        'pages': 0.5,
-    },
-    'changefreqs': {
-        'articles': 'always',
-        'indexes': 'hourly',
-        'pages': 'monthly'
-    }
+    "format": "xml",
+    "priorities": {"articles": 1, "indexes": 0.5, "pages": 0.5,},
+    "changefreqs": {"articles": "always", "indexes": "hourly", "pages": "monthly"},
 }
 
 STATIC_PATHS = [
-    '.well-known/keybase.txt',
-    '.well-known/security.txt',
-    'cv',
-    'images',
-    'robots.txt',
+    ".well-known/keybase.txt",
+    ".well-known/security.txt",
+    "cv",
+    "images",
+    "robots.txt",
 ]
 
 EXTRA_PATH_METADATA = {
-    'robots.txt': {'path': 'robots.txt'},
-    '.well-known/keybase.txt': {'path': '.well-known/keybase.txt'},
+    "robots.txt": {"path": "robots.txt"},
+    ".well-known/keybase.txt": {"path": ".well-known/keybase.txt"},
 }
 
-GITHUB_URL = 'https://github.com/LouisJackman'
+GITHUB_URL = "https://github.com/LouisJackman"
 
 # Social widget
-SOCIAL = [
-    ('Stack Exchange', 'https://stackexchange.com/users/2032836/ljackman')
-]
+SOCIAL = [("Stack Exchange", "https://stackexchange.com/users/2032836/ljackman")]
 
 DISPLAY_PAGES_ON_MENU = False
 
 DEFAULT_PAGINATION = 10
 DISPLAY_CATEGORIES_ON_MENU = False
-THEME = 'themes/default'
+THEME = "themes/default"
 TYPOGRIFY = True
