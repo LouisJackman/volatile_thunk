@@ -380,11 +380,11 @@ th, td {
 }
 
 th {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text-color);
 }
 
 td {
-    border-left: 1px solid black;
+    border-left: 1px solid var(--text-color);
 }
 
 td:first-child {
@@ -392,16 +392,11 @@ td:first-child {
 }
 
 td:last-child {
-    border-right: 1px solid black;
-}
-
-tr:nth-child(even) {
-    background-color: #e0e0e0;
-    background-color: #d0d0d0;
+    border-right: 1px solid var(--text-color);
 }
 
 tr:last-child {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text-color);
 }
 
 @media (orientation: landscape) and (max-device-width: 599px) {
