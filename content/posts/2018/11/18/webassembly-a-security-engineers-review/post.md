@@ -49,6 +49,7 @@ manipulations are presumably translated into register stores and loads by JIT
 compilers. This makes sense, as efficient register allocation has been a solved
 problem in computer science for quite some time.
 
+    :::text
     (func $add-two-numbers (param $x i32) (param $y i32) (result i32)
       load_local $x
       load_local $y
@@ -147,6 +148,7 @@ of an executable can yield different results depending on how much syntactical
 sugar and conveniences one opts into. For example, the WebAssembly example above
 can also be written like this, making it almost resemble Lisp:
 
+    :::text
     (func $add-two-numbers (param $x i32) (param $y i32) (result i32)
       (i32.add (load_local $x)
                (load_local $y)))
