@@ -167,6 +167,7 @@ p,
 ul,
 body dl dt {
     font-size: 20px;
+    font-weight: 200;
 }
 
 .post-info time.published {
@@ -294,7 +295,7 @@ li {
 }
 
 .full-tags-list li {
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     display: inline-block;
     padding: 4px 7px;
     margin-left: 10px;
