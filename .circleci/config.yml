@@ -18,7 +18,7 @@ jobs:
           name: Pull LFS Artefacts
           command: |
             sudo apt-get install --yes --no-install-recommends git-lfs
-            git lfs fetch
+            git lfs pull
 
       - restore_cache:
           keys:
