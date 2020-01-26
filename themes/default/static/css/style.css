@@ -160,14 +160,13 @@ ul,
 body dl dt {
     line-height: 30px;
     letter-spacing: .5px;
-    font-weight: lighter;
 }
 
 p,
 ul,
 body dl dt {
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .post-info time.published {
