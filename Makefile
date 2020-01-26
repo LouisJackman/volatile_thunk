@@ -41,6 +41,21 @@ help:
 stylise_code:
 	pygmentize -S solarized-dark -f html -a .highlight >themes/default/static/css/pygment.css
 
+minify_css:
+	for css in output/theme/css/*.css; \
+	do \
+		python3 -m csscompressor -o "$$css" "$$css"; \
+	done
+
+minify_js:
+	for script in output/theme/scripts/*; \
+	do \
+		python3 -m rjsmin <"$$script" >"$${script}.min"; \
+		mv "$${script}.min" "$$script"; \
+	done
+
+minify: minify_css minify_js
+
 html: stylise_code
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
@@ -79,10 +94,12 @@ else
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
 endif
 
-publish: stylise_code
+just_publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-just_s3_upload: publish
+publish: stylise_code just_publish minify
+
+just_s3_upload:
 	aws s3 sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl public-read --delete
 
 s3_upload: publish just_s3_upload
