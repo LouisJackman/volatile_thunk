@@ -5,6 +5,7 @@ Category: Meta
 I can be contacted via the following channels:
 
 * [LinkedIn](https://uk.linkedin.com/in/louis-jackman)
+* [Twitter](https://twitter.com/ljackman9)
 * [Keybase](https://keybase.io/LouisJackman)
 
 I also have profiles on these other sites:
