@@ -40,6 +40,12 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
+check_types:
+	mypy *.py
+
+check_formatting:
+	black --check --target-version py37 *.py
+
 stylise_code:
 	pygmentize -S solarized-dark -f html -a .highlight >themes/default/static/css/pygment.css
 
@@ -97,7 +103,7 @@ endif
 just_publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-publish: stylise_code just_publish minify add_web_artefacts
+publish: check_types check_formatting stylise_code just_publish minify add_web_artefacts
 
 just_s3_upload:
 	aws s3 sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl public-read --delete

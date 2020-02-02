@@ -44,7 +44,7 @@ jobs:
             unset AWS_ACCESS_KEY_ID
             unset AWS_SECRET_ACCESS_KEY
             . venv/bin/activate
-            mypy compose.py publish.py
+            make check_types
 
       - run:
           name: Check Formatting
@@ -52,7 +52,7 @@ jobs:
             unset AWS_ACCESS_KEY_ID
             unset AWS_SECRET_ACCESS_KEY
             . venv/bin/activate
-            black --check --target-format py37 *.py
+            make check_formatting
 
       - run:
           name: Publish Locally
