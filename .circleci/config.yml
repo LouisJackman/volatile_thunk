@@ -47,6 +47,14 @@ jobs:
             mypy compose.py publish.py
 
       - run:
+          name: Check Formatting
+          command: |
+            unset AWS_ACCESS_KEY_ID
+            unset AWS_SECRET_ACCESS_KEY
+            . venv/bin/activate
+            black --check --target-format py37 *.py
+
+      - run:
           name: Publish Locally
           command: |
             unset AWS_ACCESS_KEY_ID
