@@ -10,6 +10,8 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 S3_BUCKET=volatilethunk.com
 
+AI_PATHFINDING_RELEASE=0.1.0
+CONWAYS_GAME_OF_LIFE_RELEASE=0.1.0
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -42,17 +44,10 @@ stylise_code:
 	pygmentize -S solarized-dark -f html -a .highlight >themes/default/static/css/pygment.css
 
 minify_css:
-	for css in output/theme/css/*.css; \
-	do \
-		python3 -m csscompressor -o "$$css" "$$css"; \
-	done
+	./scripts/minify_css.sh
 
 minify_js:
-	for script in output/theme/scripts/*; \
-	do \
-		python3 -m rjsmin <"$$script" >"$${script}.min"; \
-		mv "$${script}.min" "$$script"; \
-	done
+	./scripts/minify_js.sh
 
 minify: minify_css minify_js
 
@@ -64,6 +59,11 @@ clean:
 
 regenerate: stylise_code
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+
+add_web_artefacts:
+	export AI_PATHFINDING_RELEASE="$(AI_PATHFINDING_RELEASE)"; \
+	export CONWAYS_GAME_OF_LIFE_RELEASE="$(CONWAYS_GAME_OF_LIFE_RELEASE)"; \
+	./scripts/add_web_artefacts.sh
 
 serve: stylise_code
 ifdef PORT
@@ -97,7 +97,7 @@ endif
 just_publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-publish: stylise_code just_publish minify
+publish: stylise_code just_publish minify add_web_artefacts
 
 just_s3_upload:
 	aws s3 sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl public-read --delete
