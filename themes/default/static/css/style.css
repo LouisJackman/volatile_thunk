@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    color-scheme: light dark;
     --background-color: rgb(255, 255, 255);
     --text-color: rgb(27, 27, 27);
 
