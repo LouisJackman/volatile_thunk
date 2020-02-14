@@ -6,13 +6,14 @@ jobs:
       - image: debian:buster-slim
 
     steps:
-      - checkout
 
       - run:
           name: Install Packages
           command: |-
             DEBIAN_FRONTEND=noninteractive apt-get update
-            DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends git git-lfs hugo make curl awscli openssh-client
+            DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends git git-lfs hugo make curl awscli
+
+      - checkout
 
       - run:
           name: Pull with Submodules and LFS Files
