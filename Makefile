@@ -1,114 +1,61 @@
-PY?=python3
-PELICAN?=pelican
-PELICANOPTS=
+.POSIX:
 
-BASEDIR=$(CURDIR)
-INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=$(BASEDIR)/output
-CONFFILE=$(BASEDIR)/pelicanconf.py
-PUBLISHCONF=$(BASEDIR)/publishconf.py
+HUGO=hugo
 
 S3_BUCKET=volatilethunk.com
+OUTPUT_DIR=public
 
-AI_PATHFINDING_RELEASE=0.1.0
-CONWAYS_GAME_OF_LIFE_RELEASE=0.1.0
+AI_PATHFINDING_RELEASE=0.1.1
+CONWAYS_GAME_OF_LIFE_RELEASE=0.1.1
 
-DEBUG ?= 0
-ifeq ($(DEBUG), 1)
-	PELICANOPTS += -D
-endif
-
-RELATIVE ?= 0
-ifeq ($(RELATIVE), 1)
-	PELICANOPTS += --relative-urls
-endif
+build:
+	$(HUGO)
 
 help:
-	@echo 'Makefile for a pelican Web site                                           '
-	@echo '                                                                          '
-	@echo 'Usage:                                                                    '
-	@echo '   make html                           (re)generate the web site          '
-	@echo '   make clean                          remove the generated files         '
-	@echo '   make regenerate                     regenerate files upon modification '
-	@echo '   make publish                        generate using production settings '
-	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
-	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
-	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
-	@echo '   make s3_upload                      upload the web site via S3         '
-	@echo '                                                                          '
-	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
-	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
-	@echo '                                                                          '
-
-check_types:
-	mypy *.py
-
-check_formatting:
-	black --check --target-version py37 *.py
-
-stylise_code:
-	pygmentize -S solarized-dark -f html -a .highlight >themes/default/static/css/pygment.css
-
-minify_css:
-	./scripts/minify_css.sh
-
-minify_js:
-	./scripts/minify_js.sh
-
-minify: minify_css minify_js
-
-html: stylise_code
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	@echo 'Makefile for VolatileThunk                                            '
+	@echo '                                                                      '
+	@echo 'Usage:                                                                '
+	@echo '   make build                  build the site                         '
+	@echo '   make help                   show this help                         '
+	@echo '   make clean                  remove the generated files             '
+	@echo '   make rm_unused_theme_files  regenerate files upon modification     '
+	@echo '   make add_web_artefacts      package webapp projects                '
+	@echo '   make serve                  serve at http://localhost:1313         '
+	@echo '   make serve-global           serve globally at http://localhost:1313'
+	@echo '   make publish                create uploadable package of aretfacts '
+	@echo '   make s3_upload              upload the web site via S3             '
+	@echo '                                                                      '
 
 clean:
-	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+	if [ -d "$(OUTPUT_DIR)" ]; \
+	then \
+	    rm -rf "$(OUTPUT_DIR)"; \
+	fi
 
-regenerate: stylise_code
-	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+rm_unused_theme_files:
+	rm \
+		"$(OUTPUT_DIR)"/*.png \
+		"$(OUTPUT_DIR)"/*.svg \
+		"$(OUTPUT_DIR)"/*.ico \
+		"$(OUTPUT_DIR)"/browserconfig.xml \
+		"$(OUTPUT_DIR)"/site.webmanifest
 
 add_web_artefacts:
 	export AI_PATHFINDING_RELEASE="$(AI_PATHFINDING_RELEASE)"; \
 	export CONWAYS_GAME_OF_LIFE_RELEASE="$(CONWAYS_GAME_OF_LIFE_RELEASE)"; \
-	./scripts/add_web_artefacts.sh
+	export OUTPUT_DIR="$(OUTPUT_DIR)"; \
+	./scripts/add_web_artefacts.sh "$(OUTPUT_DIR)"
 
-serve: stylise_code
-ifdef PORT
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
-else
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-endif
+serve:
+	$(HUGO) serve
 
-serve-global: stylise_code
-ifdef SERVER
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b $(SERVER)
-else
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b 0.0.0.0
-endif
+serve-global:
+	$(HUGO) serve --bind 0.0.0.0
 
-
-devserver: stylise_code
-ifdef PORT
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
-else
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-endif
-
-devserver-global: stylise_code
-ifdef PORT
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b 0.0.0.0
-else
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
-endif
-
-just_publish:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
-
-publish: check_types check_formatting stylise_code just_publish minify add_web_artefacts
+publish: build rm_unused_theme_files add_web_artefacts
 
 just_s3_upload:
-	aws s3 sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl public-read --delete
+	aws s3 sync "$(OUTPUT_DIR)/" "s3://$(S3_BUCKET)" --acl public-read --delete
 
 s3_upload: publish just_s3_upload
 
-
-.PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload

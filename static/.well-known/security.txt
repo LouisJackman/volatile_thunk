@@ -1,0 +1,3 @@
+Contact: https://volatilethunk.com/pages/about/
+Preferred-Languages: en
+Canonical: https://volatilethunk.com/.well-known/security.txt

@@ -1,0 +1,61 @@
+baseURL = "https://volatilethunk.com"
+languageCode = "en-gb"
+title = "Louis Jackman"
+theme = "hermit"
+defaultContentLanguage = "en"
+pygmentsCodefences  = true
+pygmentsUseClasses  = true
+rssLimit = 10
+enableRobotsTXT = true
+
+[author]
+  name = "Louis Jackman"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  themeColor = "#494f5c"
+  homeSubtitle = "InfoSec, Software Architecture & Other Esoteria"
+  justifyContent = false
+  relatedPosts = true
+  code_copy_button = true
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/LouisJackman"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://uk.linkedin.com/in/louis-jackman"
+
+  [[params.social]]
+    name = "stackoverflow"
+    url = "https://stackexchange.com/users/2032836/ljackman"
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/ljackman9"
+
+[menu]
+
+  [[menu.main]]
+    name = "Articles"
+    url = "articles"
+    weight = 10
+
+  [[menu.main]]
+    name = "About"
+    url = "pages/about"
+    weight = 30
+
+  [[menu.main]]
+    name = "Curriculum Vitæ"
+    url = "louis-jackman-cv.pdf"
+    weight = 20
+

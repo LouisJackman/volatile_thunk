@@ -1,51 +1,60 @@
-Title: About
-Date: 2018-03-10 19:06
-Category: Meta
++++
+title = "About"
+date = "2018-03-10"
+category = "Meta"
++++
 
-I'm your host, Louis Jackman. Welcome to my site.
+I'm Louis Jackman, a security engineer in the UK specialising in information
+security and software development. This website's articles are mostly around
+these topics albeit with diversions.
 
-I live in the UK and specialise in information security and software
-development. I can do system administration, but that interest only goes so far
-as to support other areas I'm interested in. This website's articles are mostly
-around these topics, albeit with many diversions.
+My CV is [here](/pages/louis-jackman-cv.pdf). Additional contact information
+like my [LinkedIn profile](https://uk.linkedin.com/in/louis-jackman) appears
+below.
 
-My CV can be found as [here](/theme/cv/louis-jackman-cv.pdf). Contact
-information like my [LinkedIn profile](https://uk.linkedin.com/in/louis-jackman)
-can be found on the [contact page](/pages/contact.html).
+---
 
-***
+I like to think that I work on an intersection between practical InfoSec and
+theoretical computer science, but it's likely too little of the former and too
+much of the latter in practice.
 
-Aside from my primary skills, my technological interests also include
-programming language theory, concurrency and parallelism,
-[langsec](http://langsec.org/), programming formalism like static typing and
-proof systems, and compile-time metaprogramming. I might even have ended up a
-static-typing zealot were it not for my exposure to
-[Lisp](http://lisp-lang.org/) and [Erlang](https://www.erlang.org/).
-
-I'm at home in Unix-like command line environments, web browsers, and
-mobile-style apps, but feel out of my element using WIMP GUIs on the desktop,
-non-Unix-like operating systems, and bulky IDEs. There's nothing _wrong_ with
-them, they just don't match my style of working.
-
-***
-
-I've worked with Linux, AWS, Python, Ansible, system hardening, ISMSes,
-REST/HTTP, Terraform, Docker, and Java and its Spring ecosystem.  I've also
-dabbled in Kubernetes, TypeScript, Selenium, WordPress, Ruby, Heroku, various
-versions of Angular, React, redux, redux-observable, RxJS, and macOS. Dabbling
-isn't the same as being adept, of course.
-
-JavaScript and Rust feature heavily in my personal projects, with C and Python
-also showing up from time to time. I've used Rust since 0.15, but it has
-thankfully stabilised a lot since then.
+Some engineers consider themselves an "Technology Stack X Developer"; I don't.
+When given the choice, I mostly stick to the trifecta of Go, TypeScript, and
+Rust these days. However, technological tools come and go with the wind; there's
+little point in being dogmatic about them.
 
 My spare time is sometimes occupied with writing articles for this site and
 working on projects like my programming language
-[Sylan](https://sylan.technology/), but most of it is non-technological
-endevours.
+[Sylan](https://github.com/LouisJackman/sylan), but most of it is
+non-technological endevours.
+
+---
+
+Contact me via:
+
+* [LinkedIn](https://uk.linkedin.com/in/louis-jackman)
+* [Twitter](https://twitter.com/ljackman9)
+* [Keybase](https://keybase.io/LouisJackman)
+
+There are also profiles on these sites:
+
+* [GitHub](https://github.com/LouisJackman)
+* [StackExchange](https://stackoverflow.com/users/1816025/ljackman)
+* [Hacker News](https://news.ycombinator.com/user?id=ljackman)
+* [Lobsters](https://lobste.rs/u/ljackmanf)
+* [Codewars](https://www.codewars.com/users/LouisJackman)
 
 ***
 
-This site uses [Pelican](https://getpelican.com), which is implemented in
-[Python](https://www.python.org) and uses [Jinja](http://jinja.pocoo.org) for
-templating.
+Two web visualisation projects are here:
+
+* [Pathfinder (A University AI Module Project)](/projects/ai-pathfinding-project/index.htm) ([Source](https://github.com/LouisJackman/ai-pathfinding-project/blob/master/main.ts))
+* [Conway's Game of Life](/projects/conways-game-of-life/index.htm) ([Source](https://github.com/LouisJackman/conways-game-of-life/blob/master/main.ts))
+
+***
+
+This site uses [Hugo](https://gohugo.io/) which is implemented in
+[Go](https://golang.org/). It uses a slightly modified variant of the [Hermit
+theme](https://github.com/Track3/hermit) theme by
+[Track3](https://github.com/Track3).
+

@@ -15,9 +15,9 @@ add() {
     local uri="$1"
     shift
 
-    mkdir -p "output/theme/projects/$name"
+    mkdir -p "$OUTPUT_DIR/projects/$name"
     (
-        cd "output/theme/projects/$name"
+        cd "$OUTPUT_DIR/projects/$name"
         curl -LOSfs "$uri"
         tar -xzf "$name.tgz"
         rm "$name.tgz"
@@ -28,7 +28,7 @@ main() {
     local name
     local uri
 
-    mkdir -p output/theme/projects
+    mkdir -p "$OUTPUT_DIR/projects"
     for project in ai conway
     do
         eval "name=\$${project}_name"
