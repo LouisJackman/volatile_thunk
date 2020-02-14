@@ -23,7 +23,7 @@ jobs:
             git lfs pull
 
       - run:
-          name: Publish
+          name: Publish & Upload
           command: |-
-            make just_s3_upload
+            make s3_upload
 
