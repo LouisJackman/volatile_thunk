@@ -11,7 +11,7 @@ jobs:
           name: Install Packages
           command: |-
             DEBIAN_FRONTEND=noninteractive apt-get update
-            DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends git git-lfs hugo make curl awscli
+            DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends git git-lfs hugo make curl awscli openssh-client
 
       - checkout
 
