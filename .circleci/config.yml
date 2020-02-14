@@ -3,21 +3,21 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.7
+      - image: debian:buster-slim
 
     steps:
       - checkout
 
       - run:
-          name: "Pull Submodules"
+          name: Install Packages
+          command: |
+            DEBIAN_FRONTEND=noninteractive sudo apt-get install --yes --no-install-recommends git git-lfs hugo make curl awscli
+
+      - run:
+          name: Pull Submodules
           command: |
             git submodule init
             git submodule update --remote
-
-      - run:
-          name: Pull LFS Artefacts
-          command: |
-            sudo apt-get install --yes --no-install-recommends git-lfs
             git lfs pull
 
       - restore_cache:
@@ -25,46 +25,14 @@ jobs:
             - project-cache
 
       - run:
-          name: Install Dependencies
-          command: |
-            unset AWS_ACCESS_KEY_ID
-            unset AWS_SECRET_ACCESS_KEY
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
-
-      - save_cache:
-          key: project-cache
-          paths:
-            - ./venv
-
-      - run:
-          name: Check Types
-          command: |
-            unset AWS_ACCESS_KEY_ID
-            unset AWS_SECRET_ACCESS_KEY
-            . venv/bin/activate
-            make check_types
-
-      - run:
-          name: Check Formatting
-          command: |
-            unset AWS_ACCESS_KEY_ID
-            unset AWS_SECRET_ACCESS_KEY
-            . venv/bin/activate
-            make check_formatting
-
-      - run:
           name: Publish Locally
           command: |
             unset AWS_ACCESS_KEY_ID
             unset AWS_SECRET_ACCESS_KEY
-            . venv/bin/activate
             make publish
 
       - run:
           name: Upload locally Published Results
           command: |
-            . venv/bin/activate
             make just_s3_upload
 
