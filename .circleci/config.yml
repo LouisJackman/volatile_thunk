@@ -10,18 +10,19 @@ jobs:
 
       - run:
           name: Install Packages
-          command: |
+          command: |-
+            DEBIAN_FRONTEND=noninteractive apt-get update
             DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends git git-lfs hugo make curl awscli
 
       - run:
           name: Pull with Submodules and LFS Files
-          command: |
+          command: |-
             git submodule init
             git submodule update --remote
             git lfs pull
 
       - run:
           name: Publish
-          command: |
+          command: |-
             make just_s3_upload
 
