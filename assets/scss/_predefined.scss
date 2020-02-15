@@ -7,6 +7,10 @@ $dark-grey: black;
 $highlight-grey: #7d828a;
 $midnightblue: #2c3e50;
 
+:root {
+    --border-color: rgba(255, 255, 255, .2)
+}
+
 // Fonts
 //
 $fonts: /* Safari for OS X and iOS (San Francisco) */
@@ -45,3 +49,20 @@ $code-fonts: Consolas, "Andale Mono WT", "Andale Mono", Menlo, Monaco, "Lucida C
     }
   }
 }
+
+/*
+ * Override Dashed Borders in Hermit theme.
+ */
+
+hr {
+    border-style: solid !important;
+}
+
+.posts-group .post-item {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.related-posts {
+    border: 3px solid var(--border-color) !important;
+}
+
