@@ -7,7 +7,7 @@ I'm Louis Jackman, a security engineer in the UK specialising in information
 security and software development. This website's articles are mostly around
 these topics albeit with diversions.
 
-My CV is [here](/pages/louis-jackman-cv.pdf). Additional contact information
+My CV is [here](/louis-jackman-cv.pdf). Additional contact information
 like my [LinkedIn profile](https://uk.linkedin.com/in/louis-jackman) appears
 below.
 
