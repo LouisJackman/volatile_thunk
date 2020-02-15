@@ -7,6 +7,7 @@ pygmentsCodefences  = true
 pygmentsUseClasses  = true
 rssLimit = 10
 enableRobotsTXT = true
+uglyURLs = true
 
 [author]
   name = "Louis Jackman"
@@ -46,12 +47,12 @@ enableRobotsTXT = true
 
   [[menu.main]]
     name = "Articles"
-    url = "articles"
+    url = "articles.html"
     weight = 10
 
   [[menu.main]]
     name = "About"
-    url = "pages/about"
+    url = "pages/about.html"
     weight = 30
 
   [[menu.main]]

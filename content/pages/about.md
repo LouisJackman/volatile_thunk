@@ -48,8 +48,8 @@ There are also profiles on these sites:
 
 Two web visualisation projects are here:
 
-* [Pathfinder (A University AI Module Project)](/projects/ai-pathfinding-project/index.htm) ([Source](https://github.com/LouisJackman/ai-pathfinding-project/blob/master/main.ts))
-* [Conway's Game of Life](/projects/conways-game-of-life/index.htm) ([Source](https://github.com/LouisJackman/conways-game-of-life/blob/master/main.ts))
+* [Pathfinder (A University AI Module Project)](/projects/ai-pathfinding-project/index.html) ([Source](https://github.com/LouisJackman/ai-pathfinding-project/blob/master/main.ts))
+* [Conway's Game of Life](/projects/conways-game-of-life/index.html) ([Source](https://github.com/LouisJackman/conways-game-of-life/blob/master/main.ts))
 
 ***
 
