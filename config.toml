@@ -47,7 +47,7 @@ uglyURLs = true
 
   [[menu.main]]
     name = "Articles"
-    url = "articles.html"
+    url = "posts.html"
     weight = 10
 
   [[menu.main]]

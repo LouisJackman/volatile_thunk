@@ -1,7 +1,6 @@
 +++
 title = "About"
 date = "2018-03-10"
-category = "Meta"
 +++
 
 I'm Louis Jackman, a security engineer in the UK specialising in information
