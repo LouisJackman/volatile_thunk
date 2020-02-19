@@ -8,6 +8,7 @@ pygmentsUseClasses  = true
 rssLimit = 10
 enableRobotsTXT = true
 uglyURLs = true
+metaDataFormat = "toml"
 
 [author]
   name = "Louis Jackman"
