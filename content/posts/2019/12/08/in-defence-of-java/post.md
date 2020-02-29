@@ -12,7 +12,7 @@ become the new defacto JVM language.
 
 I'm unconvinced, and this article explains why.
 
-# Introduction
+## Introduction
 
 Programming languages these days seem to mostly fit into two camps: mainstream
 languages accumulating features quickly to follow software development trends,
@@ -39,7 +39,7 @@ cousin TypeScript, C#, Java, Python, Ruby, Kotlin, Swift, and Go.
 This defence of Java is really a broader plea for convervativeness in
 programming language theory that still respects expressive power.
 
-# The Backlash to Cleverness
+## The Backlash to Cleverness
 
 The term "Java" conjures bad memories for many developers, likely the
 overwrought abstractions of JavaBeans, Spring runtime-based dependency
@@ -149,7 +149,7 @@ to remove footguns increases _initial ease of use_ but decreases _simplicity_.
 This is something that Rich Hickey, the creator of Clojure, [seems to understand
 more than most language designers](https://www.youtube.com/watch?v=34_L7t7fD_U).
 
-# Lacking Expressiveness Trades Simplicity for Ease-of-Use
+## Lacking Expressiveness Trades Simplicity for Ease-of-Use
 
 Decreasing simplicity across the layers of our systems for a small, fixed
 increase in programming language ease-of-use is a decision that, given its
@@ -252,7 +252,7 @@ This is why I think Java's design is more coherent than many other mainstream
 languages today: that focus on simplicity of abstraction and orthogonality over
 direct ease of use.
 
-# Why Orthogonality is Important
+## Why Orthogonality is Important
 
 Orthogonality allows language features to be considered independently of other
 features. Using one orthogonal feature does not necessitate dragging in others
@@ -328,7 +328,7 @@ multiple threads transparently and with ease.
 C# and Haskell have comparable features, but it is a step up over other
 languages like Python, Ruby, Perl, and JavaScript.
 
-# How Programming Language Ecosystems become Echo Chambers
+## How Programming Language Ecosystems become Echo Chambers
 
 Why, if orthogonality is so important, does it come up so little in
 conversations with developers about additions they want to see in future
@@ -370,7 +370,7 @@ an echo chamber ecosystem while the silent majority of its developers become
 increasingly confused at its endless new features. Java has thankfully managed
 to avoid this.
 
-# Hosted Languages and Standalone Languages
+## Hosted Languages and Standalone Languages
 
 Features can be refined, polished, and added in an orthogonal, tasteful manner,
 yet still not work due to a lack of runtime support. Not all language features
@@ -436,7 +436,7 @@ The third approach is problematic but is understandable for some languages given
 its benefits. But Java won't suffer such problems simply because it owns
 its own runtime.
 
-# Surface Syntax and Programming Language Sales Pitches
+## Surface Syntax and Programming Language Sales Pitches
 
 Does the average developer care about these ruminations when looking at an
 exciting new language trending on sites like Hacker News? No. They care about
@@ -480,7 +480,7 @@ kills performance, and how it guarantees compatibility of tricks that thwart
 optimisations, such as allowing local variables in parent stackframes to be
 modified by callees through dynamic stack-walking.)
 
-# Slow, Coherent Growth versus "Agile" Accumulation of Features
+## Slow, Coherent Growth versus "Agile" Accumulation of Features
 
 As software development adopts churn from fad-driven cycles, it loses sight of
 foundational CS ideas that allows certain technologies to stand the test of time
@@ -517,7 +517,7 @@ experts rather than by committee is resulting in a better language. By contrast,
 JavaScript seems to have become much harder to reason about these days than the
 subset of ES5 that Douglas Crockford termed the "Good Parts".
 
-# Why Java Will, and Should, Continue to Thrive for Years to Come
+## Why Java Will, and Should, Continue to Thrive for Years to Come
 
 Sandboxing didn't really work, ubiquitous reflection and the ability to
 dynamically revert accessibility and finality modifiers on fields was a mistake,

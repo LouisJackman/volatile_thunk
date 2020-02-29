@@ -730,13 +730,14 @@ hr.post-end {
 }
 
 #TableOfContents {
-    font-size: .8em;
+    font-size: 1.2em;
     opacity: var(--dimmed);
 }
 
 #TableOfContents ul {
     padding-left: 1em;
-    margin: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 #TableOfContents > ul {
@@ -749,6 +750,10 @@ hr.post-end {
 
 #TableOfContents a:hover {
     border-bottom: var(--link) 1px solid;
+}
+
+#TableOfContents li:not(last-child) {
+    margin-bottom: .5em;
 }
 
 .post-nav {

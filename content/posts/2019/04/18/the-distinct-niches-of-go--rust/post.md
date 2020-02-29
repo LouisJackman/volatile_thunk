@@ -19,7 +19,7 @@ to different areas and solving different problems. A shared similarity between
 them is that they were a response to the problems of common languages in the
 same way that those languages were a response to their predecessors.
 
-# The Failed Promises of Language Virtual Machines
+## The Failed Promises of Language Virtual Machines
 
 C++ for application development had serious problems that made it ripe for
 disruption. Although direct memory management is important for systems
@@ -89,7 +89,7 @@ informally-specified C ABIs to communicate directly with CPython or Node.js.
 In the same way that the virtual machine languages Java and C# addressed the
 problems of their predecessors, so did the next generation of languages.
 
-# The Revenge of Natively Compiled Languages
+## The Revenge of Natively Compiled Languages
 
 When Go came onto the scene, it promised more usable concurrency primitives,
 direct native compilation with statically linked libraries, more direct control
@@ -117,7 +117,7 @@ code and the underlying platform became less of a useful portability layer and
 more of a distraction and a potential failure point due to the law of leaky
 abstraction.
 
-# Meanwhile, Rust Chips Away at Development that Never Left C++
+## Meanwhile, Rust Chips Away at Development that Never Left C++
 
 While Go continues to serve as an alternative to the virtual machine languages
 Java and C#, Rust carved out a rather different niche. Coming from the
@@ -156,7 +156,7 @@ into efficient machine code independent of the source language. This allowed
 Rust to quickly piggy-back off many deep C++ optimisations that had been
 embedded into LLVM over the years to be benefit the C++ compiler Clang.
 
-# The Costs and Benefits of Runtimes
+## The Costs and Benefits of Runtimes
 
 For Rust and Go, the best point of comparison is their runtimes. Nothing else so
 clearly distinguishes their different target domains. Go's larger runtime,
@@ -180,7 +180,7 @@ developers should deal with when they could just delegate to a garbage
 collector?  Is Rust's lack of a large runtime really worth needing to manually
 manage asynchronosity for blocking system calls across an entire application?
 
-# The Twain Shall Coincide for the Foreseeable Future
+## The Twain Shall Coincide for the Foreseeable Future
 
 This article could have detailed the fundamentally different approaches to PLT,
 programming language theory, taken by the two languages. A modern systems ML

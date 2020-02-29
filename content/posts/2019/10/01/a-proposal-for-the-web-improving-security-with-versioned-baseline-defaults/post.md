@@ -15,7 +15,7 @@ domains, but rather than options tweaked by button presses or dial dragging,
 they configure “options” with HTML elements, HTTP headers, JavaScript APIs, and
 CSS features.
 
-# Maintaining Compatibility
+## Maintaining Compatibility
 
 The web has evolved since the ‘90s and has admirably maintained an impressive
 degree of backwards-compatibility throughout. This puts it in that rare category
@@ -41,7 +41,7 @@ pages that used to work just fine, but is it really acceptable in this age to
 allow JavaScript access to session cookies by default or to allow embedding the
 page within others unless stated otherwise?
 
-# Declaring which Set of Defaults to Use
+## Declaring which Set of Defaults to Use
 
 There are many ways in which to change the defaults of the modern web to improve
 security. HTTP headers could fallback to secure values if omitted, HTML elements
@@ -159,7 +159,7 @@ however, developers can use either one to improve security by approaching it
 from two different sides: gradually adding security versus adding all of it
 and then relaxing the new constraints as necessary.
 
-# The Proposed Version 1.0 Defaults
+## The Proposed Version 1.0 Defaults
 
 Thankfully, most HTTP headers provide explicit values for the existing default
 settings if otherwise left unspecified. These can be used to relax the
@@ -199,7 +199,7 @@ default values to:
 |`X-Frame-Options`           |`deny`                              |
 |`X-XSS-Protection`          |`1; mode=block`                     |
 
-# Notes on Some Headers
+## Notes on Some Headers
 
 The proposed defaults are designed to be usable in most contexts while fixing
 the most egregious issues and to give the most "bang for your buck" without
@@ -253,7 +253,7 @@ decide on a good common `max-age` value?
 be in the realm of _modern_ default values rather than _secure_ default values
 per se.
 
-# Conclusion
+## Conclusion
 
 The goal of this proposal isn't to aid web framework authors or established
 companies with equally established webapp codebases. They will have both the

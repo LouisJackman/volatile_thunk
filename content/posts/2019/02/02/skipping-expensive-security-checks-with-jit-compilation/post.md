@@ -21,7 +21,7 @@ architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) with
 plenty of CPU architecture edgecases, such as the massive complexity and legacy
 of the x86 instruction set.
 
-# The Problem with Machine Code as a Distributed Application Artefact
+## The Problem with Machine Code as a Distributed Application Artefact
 
 The CPU and OS must assume that the code doesn't properly split procedure
 stackframes and data stored on the stack, allowing them to mingle in the same
@@ -90,7 +90,7 @@ Is it possible for a system to only run safe languages and remove the runtime
 checks that are otherwise necessary? Even if it is possible, it the resulting
 system desirable?
 
-# Mandating Safe Languages to Eliminate Some OS and CPU Runtime Checks
+## Mandating Safe Languages to Eliminate Some OS and CPU Runtime Checks
 
 We can assume that language-specific hardware will not take the computing world
 by storm in the foreseeable future. Even very successful language runtimes such
@@ -139,7 +139,7 @@ This is why designers of environments like language VMs or OSes must be careful
 about relaxing constraints on the "apps" or "languages" running on top. Some
 platform's like Apple's iOS have done respectable jobs of this.
 
-# An Alternative
+## An Alternative
 
 How would a system that solves this work? The compilers and interpreters would
 need to be fixed and trusted; allowing arbitrary ones would allow compiling or
