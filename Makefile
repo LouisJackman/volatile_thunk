@@ -55,7 +55,7 @@ serve-global:
 publish: build rm_unused_theme_files add_web_artefacts
 
 just_s3_upload:
-	aws s3 sync "$(OUTPUT_DIR)/" "s3://$(S3_BUCKET)" --acl public-read --delete
+	aws s3 sync "$(OUTPUT_DIR)/" "s3://$(S3_BUCKET)" --delete
 
 s3_upload: publish just_s3_upload
 
