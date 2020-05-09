@@ -1,9 +1,5 @@
 # Volatile Thunk - Louis Jackman's Blog
 
-[![CircleCI](https://circleci.com/gh/LouisJackman/volatile_thunk.svg?style=svg)](https://circleci.com/gh/LouisJackman/volatile_thunk) [![Known Vulnerabilities](https://snyk.io/test/github/LouisJackman/volatile_thunk/badge.svg)](https://snyk.io/test/github/LouisJackman/volatile_thunk)
-
-## Synopsis
-
 My website, using static page generation via Hugo.
 
 This repository is hosted [on
