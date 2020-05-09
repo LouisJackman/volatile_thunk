@@ -335,7 +335,7 @@ This makes standalone lambdas more verbose but most lambdas are passed directly
 to other functions in practice. It solves most of the problems listed in this
 article but at the expense of making lambdas less notationally elegant. It's
 ultimately the choice I'm going for in
-[Sylan](https://github.com/LouisJackman/syla://github.com/LouisJackman/sylan).
+[Sylan](https://gitlab.com/sylan-language/sylan).
 
 ---
 

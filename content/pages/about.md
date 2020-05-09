@@ -24,7 +24,7 @@ little point in being dogmatic about them.
 
 My spare time is sometimes occupied with writing articles for this site and
 working on projects like my programming language
-[Sylan](https://github.com/LouisJackman/sylan), but most of it is
+[Sylan](https://gitlab.com/sylan-language/sylan), but most of it is
 non-technological endevours.
 
 ---
@@ -37,18 +37,20 @@ Contact me via:
 
 There are also profiles on these sites:
 
-* [GitHub](https://github.com/LouisJackman)
+* [GitLab](https://gitlab.com/louis.jackman)
 * [StackExchange](https://stackoverflow.com/users/1816025/ljackman)
 * [Hacker News](https://news.ycombinator.com/user?id=ljackman)
 * [Lobsters](https://lobste.rs/u/ljackmanf)
 * [Codewars](https://www.codewars.com/users/LouisJackman)
+* [GitHub](https://github.com/LouisJackman) (For mirroring GitLab and
+  collaboration with others' GitHub repositories.)
 
 ***
 
 Two web visualisation projects are here:
 
-* [Pathfinder (A University AI Module Project)](/projects/ai-pathfinding-project/index.html) ([Source](https://github.com/LouisJackman/ai-pathfinding-project/blob/master/main.ts))
-* [Conway's Game of Life](/projects/conways-game-of-life/index.html) ([Source](https://github.com/LouisJackman/conways-game-of-life/blob/master/main.ts))
+* [Pathfinder (A University AI Module Project)](/projects/ai-pathfinding-project/index.html) ([Source](https://gitlab.com/louis.jackman/ai-pathfinding-project/blob/master/main.ts))
+* [Conway's Game of Life](/projects/conways-game-of-life/index.html) ([Source](https://gitlab.com/louis.jackman/conways-game-of-life/blob/master/main.ts))
 
 ***
 

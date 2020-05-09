@@ -29,6 +29,10 @@ metaDataFormat = "toml"
   code_copy_button = true
 
   [[params.social]]
+    name = "gitlab"
+    url = "https://gitlab.com/louis.jackman"
+
+  [[params.social]]
     name = "github"
     url = "https://github.com/LouisJackman"
 
