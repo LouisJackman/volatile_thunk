@@ -6,6 +6,11 @@
 
 My website, using static page generation via Hugo.
 
+This repository is hosted [on
+GitLab.com](https://gitlab.com/louis.jackman/volatile_thunk). If you're
+seeing this on GitHub, you're on the official GitHub mirror. [Go to
+GitLab](https://gitlab.com/louis.jackman/volatile_thunk) to contribute.
+
 ## Posts
 
 Posts are put in `content`, under the subdirectory `$Y/$M/$D/$SLUGLINE`, where:
@@ -46,3 +51,4 @@ git clone --recursive https://github.com/LouisJackman/volatile_thunk.git
 The blog can be generated with `make publish`.
 
 The `s3_upload` make target publishes to AWS S3.
+
