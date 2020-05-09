@@ -5,9 +5,6 @@ HUGO=hugo
 S3_BUCKET=volatilethunk.com
 OUTPUT_DIR=public
 
-AI_PATHFINDING_RELEASE=0.1.1
-CONWAYS_GAME_OF_LIFE_RELEASE=0.1.1
-
 build:
 	$(HUGO)
 
@@ -41,8 +38,6 @@ rm_unused_theme_files:
 		"$(OUTPUT_DIR)"/site.webmanifest
 
 add_web_artefacts:
-	export AI_PATHFINDING_RELEASE="$(AI_PATHFINDING_RELEASE)"; \
-	export CONWAYS_GAME_OF_LIFE_RELEASE="$(CONWAYS_GAME_OF_LIFE_RELEASE)"; \
 	export OUTPUT_DIR="$(OUTPUT_DIR)"; \
 	./scripts/add_web_artefacts.sh "$(OUTPUT_DIR)"
 
