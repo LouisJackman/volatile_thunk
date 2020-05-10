@@ -1,5 +1,7 @@
 # Volatile Thunk - Louis Jackman's Blog
 
+[![pipeline status](https://gitlab.com/louis.jackman/volatile_thunk/badges/master/pipeline.svg)](https://gitlab.com/louis.jackman/volatile_thunk/-/commits/master)
+
 My website, using static page generation via Hugo.
 
 This repository is hosted [on
