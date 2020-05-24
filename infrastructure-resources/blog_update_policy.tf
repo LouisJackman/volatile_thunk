@@ -19,10 +19,12 @@ resource "aws_iam_policy" "blog_update" {
   ]
 }
 EOF
+
 }
 
 resource "aws_iam_policy_attachment" "blog_updater_policy_attachment" {
   name       = "blog-updater-policy-attachment"
-  groups     = ["${aws_iam_group.blog_updater.name}"]
-  policy_arn = "${aws_iam_policy.blog_update.arn}"
+  groups     = [aws_iam_group.blog_updater.name]
+  policy_arn = aws_iam_policy.blog_update.arn
 }
+
