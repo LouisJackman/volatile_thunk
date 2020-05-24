@@ -1,3 +1,4 @@
 .terraform
 resources
 public
+infrastructure-resources/*/*.zip

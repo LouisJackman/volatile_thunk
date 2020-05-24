@@ -11,3 +11,9 @@ provider "aws" {
   region  = "eu-west-2"
 }
 
+provider "aws" {
+  alias   = "aws_us"
+  version = "2.63"
+  region  = "us-east-1"
+}
+
