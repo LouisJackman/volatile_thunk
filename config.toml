@@ -22,7 +22,6 @@ metaDataFormat = "toml"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
 
-  themeColor = "#494f5c"
   homeSubtitle = "InfoSec, Software Architecture & Other Esoteria"
   justifyContent = false
   relatedPosts = true
