@@ -19,9 +19,9 @@ const expectCertificateTransparency = header(
     "max-age=86400, enforce",
 );
 
-const featurePolicy = header(
-    "Feature-Policy",
-    "ambient-light-sensor 'none'; autoplay 'none'; accelerometer 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; speaker 'none'; sync-xhr 'none'; usb 'none'; wake-lock 'none'; webauthn 'none'; vr 'none'",
+const permissionsPolicy = header(
+    "Permissions-Policy",
+    "ambient-light-sensor 'none'; autoplay 'none'; accelerometer 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; speaker 'none'; sync-xhr 'none'; usb 'none'; wake-lock 'none'; webauthn 'none'; xr-spatial-tracking 'none'",
 );
 
 const xssProtection = header(
@@ -61,7 +61,7 @@ exports.handler = async (event, context) => {
     headers["content-security-policy"] = contentSecurityPolicy;
     headers["cross-origin-resource-policy"] = crossOriginResourcePolicy;
     headers["expect-ct"] = expectCertificateTransparency;
-    headers["feature-policy"] = featurePolicy;
+    headers["permissions-policy"] = permissionsPolicy;
     headers["x-xss-protection"] = xssProtection;
     headers["x-frame-options"] = frameOptions;
     headers["referrer-policy"] = referrerPolicy;
