@@ -1,4 +1,4 @@
-# Volatile Thunk - Louis Jackman's Blog
+# Volatile Thunk - Louis Jackman's Site
 
 [![pipeline status](https://gitlab.com/louis.jackman/volatile_thunk/badges/master/pipeline.svg)](https://gitlab.com/louis.jackman/volatile_thunk/-/commits/master)
 

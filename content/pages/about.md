@@ -18,7 +18,7 @@ public key can be downloaded [here](/louis-jackman-public-pgp-key.asc).
 
 Contact me via:
 
-* Email, which can be obtained from my public PGP fingerprint above or:
+* Email; this can be obtained from my public PGP key above, or:
   - Take the first letter of my first name.
   - Take my full surname.
   - Combine them, surname last.
