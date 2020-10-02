@@ -31,6 +31,12 @@ non-technological endevours.
 
 Contact me via:
 
+* Email:
+  - Take the first letter of my first name.
+  - Take my full surname.
+  - Combine them, surname last.
+  - Lowercase them.
+  - Put `@protonmail.com` at the end.
 * [LinkedIn](https://uk.linkedin.com/in/louis-jackman)
 * [Twitter](https://twitter.com/ljackman9)
 * [Keybase](https://keybase.io/LouisJackman)
