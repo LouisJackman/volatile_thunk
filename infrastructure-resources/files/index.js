@@ -6,7 +6,7 @@ const header = (key, value) => freeze([freeze({key, value})]);
 
 const contentSecurityPolicy = header(
     "Content-Security-Policy",
-    "style-src 'self'; img-src 'self'; font-src 'self'; script-src 'self'; default-src 'none'; sandbox allow-scripts allow-same-origin",
+    "style-src 'self'; img-src 'self'; font-src 'self'; script-src 'self'; default-src 'none'; sandbox allow-scripts allow-same-origin allow-modals",
 );
 
 const crossOriginResourcePolicy = header(
