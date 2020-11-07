@@ -1,13 +1,13 @@
 # Volatile Thunk - Louis Jackman's Site
 
-[![pipeline status](https://gitlab.com/louis.jackman/volatile_thunk/badges/master/pipeline.svg)](https://gitlab.com/louis.jackman/volatile_thunk/-/commits/master)
+[![pipeline status](https://gitlab.com/louis.jackman/volatile-thunk/badges/master/pipeline.svg)](https://gitlab.com/louis.jackman/volatile_thunk/-/commits/master)
 
 My website, using static page generation via Hugo.
 
 This repository is hosted [on
-GitLab.com](https://gitlab.com/louis.jackman/volatile_thunk). If you're
+GitLab.com](https://gitlab.com/louis.jackman/volatile-thunk). If you're
 seeing this on GitHub, you're on the official GitHub mirror. [Go to
-GitLab](https://gitlab.com/louis.jackman/volatile_thunk) to contribute.
+GitLab](https://gitlab.com/louis.jackman/volatile-thunk) to contribute.
 
 ## Posts
 
@@ -41,7 +41,7 @@ like posts.
 Git cloning must be recursive as submodules are used for the default theme,
 hermit:
 ```shell
-git clone --recursive https://github.com/LouisJackman/volatile_thunk.git
+git clone --recursive https://github.com/LouisJackman/volatile-thunk.git
 ```
 
 ## Publish
