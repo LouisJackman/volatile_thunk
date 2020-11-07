@@ -23,13 +23,9 @@
 
     --dimmed: .6;
 
-    /* Scrollbar */
-    scrollbar-color: var(--midnightblue);
-
     background: var(--canvas);
     line-height: 1.7;
     letter-spacing: .06em;
-    scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
