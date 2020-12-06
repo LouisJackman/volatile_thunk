@@ -6,7 +6,7 @@ set -o nounset
 input_line=
 
 input() {
-    local prompt=$1
+    local prompt="$1"
     shift
 
     printf "%s" "$prompt: "
@@ -34,7 +34,7 @@ get_new_hugo_content_path() {
 
 insert_tags=$(cat <<-'EOF'
 
-   (NR == 1) && /\+\+\+/ {
+    (NR == 1) && /\+\+\+/ {
         in_header = 1
         print
         next
