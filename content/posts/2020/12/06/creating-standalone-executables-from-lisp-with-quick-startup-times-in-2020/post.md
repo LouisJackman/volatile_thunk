@@ -29,7 +29,7 @@ running in the background and connecting to them is a common counter-proposal
 from Lisp advocates. The community that surrounds
 [Clojure](https://clojure.org/), a Lisp dialect that runs on the Java Virtual
 Machine, often raise this solution. Just run a REPL as a daemon and keep it
-running for long periods of time. Ignore the problems of unintentionally accured
+running for long periods of time. Ignore the problems of unintentionally accrued
 state, despite programming in an ostensibly functional language. This solution
 isn't so much an actual solution as an excuse for its (historically) bad startup
 times.
