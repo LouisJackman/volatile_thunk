@@ -220,9 +220,11 @@ teenagers](https://www.jwz.org/doc/cadt.html).
 
 So far the fields have been about Clojure projects in general. The final big
 one, `:aliases`, is used here to utilise GraalVM's native imaging. This is using
-the third party package `clj.native-image`, which can be found on GitHub. This
-`deps.edn` fragment was copied-and-pasted from the project's README and tweaked
-for this use case.
+the third party package `clj.native-image`, which can be found [on
+GitHub](https://github.com/taylorwood/clj.native-image). This `deps.edn`
+fragment was copied-and-pasted from [the project's
+README](https://github.com/taylorwood/clj.native-image/blob/master/README.md#usage)
+and tweaked for this use case.
 
 Of note are:-
 
