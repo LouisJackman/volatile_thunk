@@ -85,7 +85,7 @@ Providing security controls in a way that is easily digestable to the average
 user is a topic out of scope for this post; needless to say, Linux is a prime
 example of how _not_ to do this. iOS and Qubes OS are better examples.
 
-# Rethinking Environment Layers and their Security Responsibilities
+## Rethinking Environment Layers and their Security Responsibilities
 
 Rethinking the layers that make up an OS lays bare the ambiguities about which
 layers should be handling what, and whether layers should be duplicating runtime
