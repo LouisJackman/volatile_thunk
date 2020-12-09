@@ -14,7 +14,7 @@ help:
 	@echo Makefile for VolatileThunk
 	@echo
 	@echo Usage:
-	@echo    make build                  Build the site.
+	@echo    make                        Build the site.
 	@echo    make help                   Show this help.
 	@echo    make clean                  Remove the generated files.
 	@echo    make rm_unused_theme_files  Regenerate files upon modification.
@@ -49,7 +49,7 @@ serve:
 serve-global:
 	$(HUGO) serve --bind 0.0.0.0
 
-publish: build rm-unused-theme-files add-web-artefacts
+publish: all rm-unused-theme-files add-web-artefacts
 
 just-s3-upload:
 	aws s3 sync "$(OUTPUT_DIR)/" "s3://$(S3_BUCKET)" --delete
