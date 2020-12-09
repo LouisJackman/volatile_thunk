@@ -2,23 +2,25 @@
 
 [![pipeline status](https://gitlab.com/louis.jackman/volatile-thunk/badges/master/pipeline.svg)](https://gitlab.com/louis.jackman/volatile_thunk/-/commits/master)
 
-My website, using static page generation via Hugo.
+My website, using static page generation via [Hugo](https://gohugo.io/).
 
-This repository is hosted [on
-GitLab.com](https://gitlab.com/louis.jackman/volatile-thunk). If you're
-seeing this on GitHub, you're on the official GitHub mirror. [Go to
-GitLab](https://gitlab.com/louis.jackman/volatile-thunk) to contribute.
+This repository is currently hosted [on
+GitLab.com](https://gitlab.com/louis.jackman/volatile-thunk). Official mirrors
+exist on [SourceHut](https://git.sr.ht/~louisjackman/volatile-thunk) and
+[GitHub](https://github.com/LouisJackman/volatile-thunk). At the moment, GitLab
+is still the official hub for contributions such as PRs and issues.
 
 ## Posts
 
-Posts are put in `content`, under the subdirectory `$Y/$M/$D/$SLUGLINE`, where:
+Posts are put in `content/posts`, under the subdirectory `$Y/$M/$D/$SLUGLINE`,
+where:
 
-* $Y = Year
-* $M = Month
-* $D = Day
-* $SLUGLINE = The article's title, snake cased.
+* `$Y`: Year
+* `$M`: Month
+* `$D`: Day
+* `$SLUGLINE`: The article's title, snake cased.
 
-They are written in Markdown, and have metadata at the start like this:
+They are written in Markdown, and have TOML metadata at the start like this:
 
 ```markdown
 +++
@@ -32,9 +34,9 @@ This is the content of my super blog post.
 
 ## Pages
 
-Pages are put in `content` under `pages`. Their names are their titles snake
-cased. They automatically appear on the main navigation menu. They are otherwise
-like posts.
+Pages are put in `content` under `pages`. Their names are their titles,
+snake-cased. They automatically appear on the main navigation menu. They are
+otherwise like posts.
 
 ## Setup
 

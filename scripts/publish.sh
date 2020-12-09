@@ -28,10 +28,10 @@ review() {
     local article_path="$1"
     shift
 
-    echo git add "$article_path"
+    git add "$article_path"
     while :
     do
-        echo git diff --staged
+        git diff --staged
         if confirm "Do you want to commit that?"
         then
             break
@@ -75,14 +75,14 @@ commit() {
     local title
     title="$(extract_title "$path")"
 
-    echo git commit -m "Publish \"$title\""
+    git commit -m "Publish \"$title\""
 }
 
 publish() {
-    echo git show HEAD
+    git show HEAD
     if confirm 'Do you want to push that?'
     then
-        echo git push
+        git push
     else
         echo "When you're ready to publish, run 'git push'."
     fi
