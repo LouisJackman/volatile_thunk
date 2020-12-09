@@ -10,5 +10,5 @@ deploy:
     - git submodule init
     - git submodule update --remote
     - git lfs pull
-    - make s3_upload
+    - make s3-upload
 
