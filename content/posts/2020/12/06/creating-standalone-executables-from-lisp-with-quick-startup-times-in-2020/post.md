@@ -83,22 +83,27 @@ purposely-designed restrictions accordingly. Clojure itself has recently become
 more amenble to these restrictions, as well as improving startup time in
 general.
 
-This means Clojure with GraalVM does a substantially better job than other Lisps
-at creating executables. Dumping a whole image of a live Lisp system -- the
-traditional way of generating standalone executables in Lisp dialects -- is a
-suboptimal technique for producing compact artefacts. A process designed for
+This means Clojure with GraalVM does a substantially better job than some other
+Lisps at creating executables. Dumping a whole image of a live Lisp system --
+the traditional way of generating standalone executables in Lisp dialects -- is
+a suboptimal technique for producing compact artefacts. A process designed for
 ahead-of-time compilation with an aggressing shaking-out of unused dependencies
-produces tangibly better results.
+produces tangibly better results. That said, tree-shaking has been attempted in
+the Common Lisp ecosystem too. [Roswell](https://github.com/roswell/roswell), a
+Common Lisp development environment management tool, offers tree-shaking before
+building into native excutables. Schemes can produce small executables,
+specifically when being embedded into native codebases written in languages like
+C, owing to how small the language is.
 
-Disk space is an obvious metric for this. A "hello world" Clojure program
-produces a 11MB executable for me. The SBCL equivalent is orders of magnitude
-larger. 11MB is arguably 10MB too large for "hello world", but it seems within
-the bounds of acceptability in 2020. Executables around 100MB really aren't,
-which are sadly common for modern image-snapshotting approaches. While a Common
-Lisp aficionado might know a few neat tricks to make it far more compact, such
-documentation isn't easy to find. The startup time is also in Clojure's favour
-compared to other dynamic languages, countering an accumulated bad reputation in
-that area.
+Disk space is an obvious metric for this for assessing how effective unsed
+dependencies are being shaken out. A "hello world" Clojure program produces a
+11MB executable for me. The SBCL equivalent is orders of magnitude larger,
+although Roswell's tree-shaker gets it down to about 15MB for my most recent
+"hello world" attempt. 11MB is arguably 10MB too large for "hello world", but it
+seems within the bounds of acceptability in 2020. Executables around 100MB
+really aren't, which are sadly common for modern image-snapshotting approaches.
+The startup time is also in Clojure's favour compared to other dynamic
+languages, countering an accumulated bad reputation in that area.
 
 Let's retrace my steps. How did I arrive at this 11MB executable with a
 competitive startup time?
@@ -407,8 +412,9 @@ _Lisp dialects have been able to do this since dinosaurs roamed the land_.
 Producing native, standalone executables is not new. As mentioned at the start,
 SBCL and Racket can both do this. However, Clojure integrates with a mainstream
 platform (Java) and can use a technology that focuses more on AOT compilation
-than image-snapshotting. That makes it a compelling choice, even with the many
-equally-compelling alternatives out there for Lisp.
+than just tree-shaking followed by image-snapshotting. That makes it a
+compelling choice, even with the many equally-compelling alternatives out there
+for Lisp.
 
 Could I document those too? Yes, but this article is too long already.
 
@@ -423,6 +429,7 @@ made about Common Lisp back in the day due to "unLispy" design choices like
 keyword arguments, lexical scoping from Scheme, or missing
 [fexprs](https://en.wikipedia.org/wiki/Fexpr).
 
-If you don't want compact standalone executables, but instead a Lisp excellent
-at being embedded and for scripting, perhaps [Janet](https://janet-lang.org/) is
-what you're looking for.
+If you don't want AOT-compiled standalone executables, but instead a Lisp
+excellent at being embedded and for scripting, perhaps
+[Janet](https://janet-lang.org/) is what you're looking for.
+
