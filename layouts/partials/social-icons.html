@@ -1,3 +1,10 @@
 {{ range . -}}
 <a href="{{ .url | safeURL }}" title="{{ .name | humanize }}">{{ partial "svg.html" . }}</a>
 {{- end -}}
+
+<!--
+  Made invisible, since my Mastodon URI is on the contact page anyway. This is
+  used solely for validation on Mastodon's side.
+-->
+<a style="display: none" rel="me" href="https://mastodon.online/@ljackman">Mastodon</a>
+
