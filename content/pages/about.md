@@ -28,8 +28,8 @@ Contact me via:
 * [Matrix on `matrix.org`](https://app.element.io/#/welcome), user
   `@ljackman:matrix.org`. Try the [Element](https://element.io/) client if you
   haven't used Matrix before.
-* [Mastodon on `mastodon.online`](https://mastodon.online/web/accounts/166022),
-  user `@ljackman@mastodon.online`.
+* [Mastodon on `mastodon.online`](https://mastodon.online/@ljackman), user
+  `@ljackman@mastodon.online`.
 * [Signal](https://www.signal.org/), _if_ you somehow already have my mobile
   number. Other centralised phone number-based messaging services such as
   WhatsApp won't be used for new contacts.
