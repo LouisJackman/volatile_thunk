@@ -18,15 +18,23 @@ public key can be downloaded [here](/louis-jackman-public-pgp-key.asc).
 
 Contact me via:
 
-* Email; this can be obtained from my public PGP key above, or:
+* Email, encrypted with PGP if it's sensitive. The address can be extracted from
+  my public PGP key linked above, or:
   * Take the first letter of my first name.
   * Take my full surname.
   * Combine them, surname last.
   * Lowercase them.
   * Put `@protonmail.com` at the end.
+* [Matrix on `matrix.org`](https://app.element.io/#/welcome), user
+  `@ljackman:matrix.org`. Try the [Element](https://element.io/) client if you
+  haven't used Matrix before.
+* [Mastodon on `mastodon.online`](https://mastodon.online/web/accounts/166022),
+  user `@ljackman@mastodon.online`.
+* [Signal](https://www.signal.org/), _if_ you somehow already have my mobile
+  number. Other centralised phone number-based messaging services such as
+  WhatsApp won't be used for new contacts.
 * [LinkedIn](https://uk.linkedin.com/in/louis-jackman)
 * [Twitter](https://twitter.com/ljackman9)
-* [Keybase](https://keybase.io/LouisJackman)
 
 There are also profiles on these sites:
 
