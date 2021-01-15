@@ -782,6 +782,20 @@ hr.post-end {
     margin-bottom: 0;
 }
 
+/*
+ * Lame hack. This element is used solely by Mastodon to validate this site in
+ * its profile view, so it's hidden from view with `display: none`. However,
+ * setting this attribute in the element's style attribute didn't work in some
+ * contexts for some explicable reason, yet setting it in the stylesheet _did_
+ * work.
+ *
+ * Specificity seems like the most likely culprit, but shouldn't inline styles
+ * directly on elements take top priority?
+ */
+a[rel="me"] {
+    display: none !important;
+}
+
 
 /* Media Queries */
 @media (min-width: 800px) {
