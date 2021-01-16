@@ -1,4 +1,5 @@
 baseURL = "https://volatilethunk.com"
+absoluteURLs = true
 languageCode = "en-gb"
 title = "Louis Jackman"
 theme = "hermit"
