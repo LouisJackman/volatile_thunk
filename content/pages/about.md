@@ -30,7 +30,9 @@ Contact me via:
   haven't used Matrix before.
 * [Mastodon on `mastodon.online`](https://mastodon.online/@ljackman), user
   `@ljackman@mastodon.online`.
-* [Signal](https://www.signal.org/), _if_ you somehow already have my mobile
+* [Jami](https://jami.net/), if I've already given you my account ID via another
+  channel.
+* [Signal](https://www.signal.org/), if you somehow already have my mobile
   number. Other centralised phone number-based messaging services such as
   WhatsApp won't be used for new contacts.
 * [LinkedIn](https://uk.linkedin.com/in/louis-jackman)
