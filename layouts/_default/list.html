@@ -19,13 +19,15 @@
 		{{- range .Data.Pages.GroupByDate "2006" }}
 		<div class="posts-group">
 			<div class="post-year" id="{{ .Key }}">{{ .Key }}</div>
-			<ul class="posts-list">
+			<ul class="posts-list h-feed">
 				{{- range .Pages }}
 				<li class="post-item">
-					<a href="{{.Permalink}}">
-						<span class="post-title">{{.Title}}</span>
-						<span class="post-day">{{ .Date.Format .Site.Params.dateformShort }}</span>
-					</a>
+          <article>
+            <a class="h-entry" href="{{.Permalink}}">
+						  <span class="post-title p-name">{{.Title}}</span>
+						  <time class="post-day dt-published">{{ .Date.Format .Site.Params.dateformShort }}</span>
+            </a>
+          </article>
 				</li>
 				{{- end }}
 			</ul>
