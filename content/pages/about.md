@@ -3,8 +3,8 @@ title = "About"
 date = "2018-03-10"
 +++
 
-I'm Louis Jackman, a security engineer in the UK. This site's articles are
-mostly around information security and general computing, albeit with
+I'm Louis Jackman, an application security lead in the UK. This site's articles
+are mostly around information security and general computing, albeit with
 diversions.
 
 My CV is [here](/louis-jackman-cv.pdf). Additional contact information
